@@ -1,0 +1,65 @@
+
+<header>
+      <nav>
+          <div class="red_top_bar"></div>
+          <div class="flex flex_nav">
+              <div class="logo"><a routerLink="#"><img src="../assets/img/HERALDS_ICON.svg" alt="Heralds_icon"></a></div>
+              <ul class="flex hidden_ul">
+                  <li>
+                      <a href="#">About</a>
+                  </li>
+                  <li>
+                      <a href="#">Ministries <span class="hidden"><i class="fas fa-plus"></i></span></a>
+                      <input class="hidden" type="checkbox" name="" id="show-ministries">
+                      <label for="show-ministries"></label>
+                      <ul>
+                          <li> <a href="#">Music</a></li>
+                          <li><a href="#">Welfare</a></li>
+                          <li><a href="#">Media</a></li>
+                          <li><a href="#">Outreach</a></li>
+                          <li><a href="#">Tentmakers</a></li>
+                          <li><a href="#">Ushering</a></li>
+                          <li><a href="#">Follow-up</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#">Resources <span class="hidden"><i class="fas fa-plus"></i></span></a>
+                      <input class="hidden" type="checkbox" name="" id="show-resources">
+                      <label for="show-resources"></label>
+                      <ul>
+                          <li><a href="#">Books Store</a></li>
+                          <li><a href="#">Past Audio Sermons</a></li>
+                          <li><a href="#">Past Video Sermons</a></li>
+                          <li><a href="#">Devotionals</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="Dash-B" href="#">Dashboard <span class="hidden"><i class="fas fa-plus"></i></span></a>
+                      <input class="hidden" type="checkbox" name="" id="show-dashboard">
+                      <label for="show-dashboard"></label>
+                      <ul>
+                          <li><a href="#">Profile</a></li>
+                          <li><a href="#">Login</a></li>
+                          <li><a href="#">Register</a></li>
+                          <li><a href="#">Logout</a></li>
+                      </ul>
+                  </li>
+                  <li class="Give-text">
+                      <a href="#" class="Give-B">Give</a>
+                  </li>
+              </ul>
+              <div class="hidden">
+                  <input type="checkbox" name="" id="show-menu">
+                  <label for="show-menu"><i class="fas fa-bars"></i></label>
+              </div>
+          </div>
+      </nav>
+
+      <div class="vid-bg-section">
+        <router-outlet></router-outlet>
+      </div>
+
+</header>
+
+
+

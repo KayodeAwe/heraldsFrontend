@@ -1,0 +1,365 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h2{
+      font-size: 2.875em;
+      text-transform: uppercase;
+  }
+
+  header{
+      overflow: hidden;
+  }
+
+
+/*De-activated icons*/
+.hidden{
+    display: none;
+}
+
+.hidden_ul ul{
+    display: none;
+}
+
+
+.red_top_bar{
+    height: 35px;
+    background: #C1272D;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_nav{
+    align-items: center;
+    background: rgb(0, 0, 0, 91%);
+    color: white;
+    padding: 0 65px;
+}
+
+.flex li{
+    list-style: none;
+    margin: 30px 0;
+    padding: 10px;
+}
+
+/*Dropdown Menu*/
+.flex_nav .hidden_ul li{
+    position: relative;
+    top: 0px;
+    z-index: 4;
+}
+.flex_nav a{
+    color: white;
+
+    font-weight: regular;
+    text-transform: uppercase;
+}
+
+.flex_nav .Dash-B{
+    border: solid white 3px;
+    border-radius: 7px 0 0 7px;
+    padding: 10px 26px;
+    margin-right: -23px;
+    border-right: 0px;
+}
+
+.flex_nav .Give-B{
+    background: #0d674ea9;
+    border: solid white 3px;
+    padding: 10px 21px;
+    border-left: 0;
+    border-radius: 0 7px 7px 0;
+    color: white
+}
+.Give-text{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.hidden_ul li ul li{
+    margin: 0px;
+}
+
+.flex_nav .hidden_ul li:hover > ul{
+   display: block;
+   position: absolute;
+   top: 40px;
+   background: rgb(41, 41, 41);
+   padding: 2px;
+}
+.hidden_ul li ul li{
+    margin: 0px;
+}
+
+nav{
+    position: relative;
+    z-index: 2;
+}
+
+
+.vid-bg-section{
+    overflow: hidden;
+}
+
+.img-bg-overlay img{
+  width: 100vw;
+}
+.vid-bg-overlay{
+    z-index: -1;
+    width: 100%;
+    margin-top: -600px;
+}
+.banner-gradient {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    /**background-image:
+    linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));**/
+    background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 1));
+    width: 100%;
+    height: 610px;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 200px;
+}
+
+.others-banner-gradient{
+  position: absolute;
+  top: 10px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 1));
+  width: 100%;
+  height: 565px;
+  text-align: center;
+  padding: 200px;
+}
+
+.banner-text{
+    margin-top: 130px;
+    color: white;
+
+}
+.banner-text p{
+    margin-top: 20px;
+}
+.banner-links{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.banner-text .pst-sermons{
+    border: 3px solid white;
+    padding: 10px 40px;
+    border-radius: 7px 0 0 7px;
+    color: #C1272D;
+    background: white;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.banner-text .events-cal{
+    border: 3px solid white;
+    padding: 10px 40px;
+    border-radius: 0 7px 7px 0;
+    color: white;
+    margin-left: 4px;
+}
+
+.baseOtherHeader{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -5px;
+  padding-top: 8px;
+  padding-left: 840px;
+}
+.audioVideo a{
+  margin-left: 50px;
+}
+
+.baseOtherHeader a{
+  color: white;
+}
+
+.logoutbtn a{
+  padding-right: 65px;
+}
+
+.test_height{
+  height: 680px;
+  text-align: center;
+}
+.subfooter-bg-overlay{
+  background-image: url("./assets/img/sub_footer_B.png");
+  background-color: rgba(0, 0, 0, 0.96);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  position: relative;
+}
+
+.serviceTimes_text{
+  color: white;
+}
+
+.subfooter_image_text{
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 65px;
+  align-items: center;
+}
+
+.subfooter_image_text h4{
+  font-size: 29px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.underBorder{
+  background-color: #C1272D;
+  width: 70px;
+  height: 8px;
+  margin: 30px 0px;
+}
+
+.serviceTimes_text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+
+  /**padding: 20px 0px;**/
+}
+
+.serviceTimes_text h5{
+  font-size: 19px;
+  font-weight: semiBold;
+  margin-bottom: 8px;
+}
+
+.serviceTimes_text .redirect_links{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.serviceTimes_text h5 span{
+  font-size: 16px;
+  word-spacing: 10px;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.redirect_links a{
+  margin-left: 50px;
+  color: white;
+}
+
+.footer_content{
+  display: flex;
+ /** margin: 40px auto; **/
+  justify-content: space-between;
+  padding: 40px 65px;
+
+}
+
+.footer_content h6{
+  font-size: 17px;
+  color: white;
+  font-weight:normal;
+  padding-bottom: 10px;
+  border-bottom: white solid 2px;
+}
+
+.red_bg_footer{
+  background: #C1272D;
+}
+
+.menu_links{
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_links a{
+  font-size: 16px;
+  color: white;
+  margin-top: 10px;
+}
+
+.menu_links img{
+  width: 50%;
+}
+
+.pad_down p{
+  color: white;
+  font-size: 14px;
+  padding-top: 10px;
+  line-height: 25px;
+  word-spacing: 2px;
+}
+
+.social_media{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dIcons img{
+  display: flex;
+  margin-left: 10px;
+}
+.pad_down{
+  padding: 20px 0px;
+}
+
+.lastBase{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.541);
+}
+
+.lastBase p{
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.548);
+}
+/**hierachy of angular nav base framework and other components**/
+
+
+/** Media Query**/
+@media (max-width:1118px) {
+    *{
+        font-size: 14px;
+    }
+
+    .red_top_bar{
+        height: 20px;
+    }
+    .flex_nav{
+        padding: 0 15px;
+    }
+
+    .flex_nav img{
+        width: 100%;
+    }
+
+    .flex li{
+        margin: 20px 0;
+    }
+
+    .banner-gradient{
+        top: -30px;
+        padding: 180px 100px 100px 100px;
+    }
+
+}
