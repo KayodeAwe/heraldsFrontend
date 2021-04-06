@@ -16,7 +16,7 @@ export class DailyBibleReadingComponent implements OnInit {
       title: 'BIBLE READING',
       subtitle: 'Study to shew thyself approved unto God, a workman that needeth not to be ashamed',
       logOutbtn: '',
-      img_src: "../assets/img/Daily_bible_reading_B.png",
+      img_src: "testheader-bg-overlay-DailyBibleReading",
       audiobtn: '',
       videobtn: ''
     },

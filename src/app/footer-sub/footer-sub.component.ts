@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterSubComponent implements OnInit {
 
-  @Input() content:any;
+  @Input() public content_footer:any;
 
   constructor() { }
 

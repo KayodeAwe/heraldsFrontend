@@ -16,7 +16,7 @@ export class PastSermonAudioComponent implements OnInit {
       title: 'SERMONS',
       subtitle: 'Did you miss a Sermon? Find previous Sermons here',
       logOutbtn: '',
-      img_src: "../assets/img/past_sermon_video_B.png",
+      img_src: "testheader-bg-overlay-pastSermonAudio",
       audiobtn: 'Audio',
       videobtn: 'Video'
     },

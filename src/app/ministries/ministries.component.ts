@@ -16,7 +16,7 @@ export class MinistriesComponent implements OnInit {
       title: 'OUR MINISTRIES',
       subtitle: 'For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ:',
       logOutbtn: '',
-      img_src: "../assets/img/Ministries_B.png",
+      img_src: "testheader-bg-overlay-Ministries",
       audiobtn: '',
       videobtn: ''
     },

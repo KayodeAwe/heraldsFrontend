@@ -16,7 +16,7 @@ export class EventsComponent implements OnInit {
       title: 'EVENTS CALENDAR',
       subtitle: 'Welcome, to a warm Family',
       logOutbtn: '',
-      img_src: "../assets/img/Events_A.png",
+      img_src: "testheader-bg-overlay-events",
       audiobtn: '',
       videobtn: ''
     },

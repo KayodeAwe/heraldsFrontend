@@ -16,7 +16,7 @@ export class AboutTheChurchComponent implements OnInit {
       title: 'ABOUT US',
       subtitle: 'Welcome, to a warm Family',
       logOutbtn: '',
-      img_src: "../assets/img/AboutUs_B.png",
+      img_src: "testheader-bg-overlay-AboutTheChurch",
       audiobtn: '',
       videobtn: ''
     },

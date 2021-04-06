@@ -1,0 +1,172 @@
+.aboutContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4%;
+}
+
+.top_decor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.top_decor img{
+  margin-top: 2%;
+  width: 40px;
+}
+
+.red_top_decor{
+  margin-top: 2%;
+  background-color: #C1272D;
+  height: 1px;
+  margin-left: 4%;
+}
+
+.left img{
+  border-radius: 4px;
+  margin-right: 4%;
+  float: left;
+}
+
+.space-top{
+  margin-top: 6%;
+}
+.right img{
+  border-radius: 4px;
+  margin-left: 4%;
+  float: right;
+}
+
+span{
+  margin-top: 0;
+  margin-bottom: 1%;
+  font-weight: 800;
+  word-spacing: 2px;
+  font-size: 22px;
+  color:   #0d674e;
+}
+
+p{
+  font-size: 18px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.below_decor{
+  background-color:  #C1272D;
+  height: 1px;
+  margin: 6% 0 4% 0;
+  margin-right: 4%;
+}
+
+@media (min-width:1611px) {
+
+
+}
+
+@media (max-width:1268px) {
+
+
+}
+
+@media (max-width:1078px) {
+
+
+}
+
+@media (max-width:950px) {
+
+
+}
+
+@media (max-width:816px) {
+  .top_decor img{
+    width: 20px;
+  }
+  .left img{
+    width: 40%;
+    margin-right: 10px;
+  }
+  .right img{
+    width: 40%;
+    margin-left: 10px;
+  }
+  p{
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  span{
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width:685px) {
+
+}
+
+@media (max-width:613px) {
+  .top_decor img{
+    width: 20px;
+  }
+
+  .left img{
+    width: 40%;
+    margin-right: 10px;
+  }
+
+  .right img{
+    width: 40%;
+    margin-left: 10px;
+  }
+
+  p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  span{
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:513px) {
+
+}
+
+@media (max-width:415px) {
+
+  .top_decor img{
+    width: 15px;
+  }
+
+  .left img{
+    width: 40%;
+    margin-right: 8px;
+  }
+
+  .right img{
+    width: 40%;
+    margin-left: 8px;
+  }
+
+  p{
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  span{
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:320px) {
+
+}

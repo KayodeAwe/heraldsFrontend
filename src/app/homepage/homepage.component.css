@@ -1,0 +1,266 @@
+.listen-link{
+
+}
+
+.churchMoto{
+  padding: 0 4%;
+}
+
+.churchMoto h3{
+  margin-top: 10%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color:   #0d674e;
+}
+
+.churchMoto p{
+  font-size: 14px;
+  line-height: 24px;
+  padding-right: 42%;
+}
+
+.churchMoto p span{
+  color:  #C1272D;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+
+.red_line{
+  background-color:  #C1272D;
+  height: 1.1px;
+  width: 100vw;
+
+  margin: 25px 0 25px 4%;
+}
+
+.red_line_base{
+  background-color:  #C1272D;
+  height: 1.1px;
+  width: 100vw;
+  margin: 25px 0 25px 4%;
+}
+
+.underline{
+  height: 4px;
+  width: 8%;
+  background-color: #C1272D;
+  margin: 6px 0;
+}
+
+.homepage-section{
+
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+.redirection-link img{
+
+}
+
+.first_flex_control{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.right_spacing{
+  margin:0 2px;
+}
+
+.inner_flex{
+  display: flex;
+}
+
+.about_description-text{
+  padding: 0 4%;
+
+}
+
+.about_the_church-section{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 5% 0;
+}
+
+.about_description-text h3{
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color:   #0d674e;
+}
+
+.about_description-text p{
+  font-size: 14px;
+  line-height: 24px;
+  padding-right: 10%;
+  min-width: 300px;
+}
+
+.underline_about{
+  height: 4px;
+  width: 8%;
+  background-color: #C1272D;
+  margin: 6px 0 12px 0;
+}
+.Description-video{
+  margin-right: 6%;
+}
+@media (min-width:1611px) {
+  .redirection-link img{
+    width: 400px;
+  }
+
+
+}
+@media (max-width:1268px) {
+  .right_spacing{
+
+  }
+
+  .about_description-text p{
+    font-size: 14px;
+
+  }
+  .homepage-section{
+
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .churchMoto p{
+    font-size: 14px;
+    padding-right: 20%;
+  }
+}
+
+
+@media (max-width:1078px) {
+  .redirection-link img{
+    width: 280px;
+  }
+
+
+}
+
+@media (max-width:950px) {
+  .redirection-link img{
+    width: 240px;
+  }
+
+  .about_the_church-section{
+    justify-content: center;
+
+  }
+
+
+}
+
+
+@media (max-width:816px) {
+
+
+  .redirection-link img{
+    width: 200px;
+  }
+
+  .about_the_church-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+
+
+  .Description-video{
+    margin: 10% 0 15% 0;
+  }
+
+
+}
+
+
+@media (max-width:685px) {
+  .redirection-link img{
+    width: 180px;
+  }
+
+
+}
+
+@media (max-width:613px) {
+  .redirection-link img{
+    width: 150px;
+  }
+
+
+}
+
+@media (max-width:513px) {
+  .redirection-link img{
+    width: 120px;
+  }
+
+
+}
+
+@media (max-width:415px) {
+  .redirection-link img{
+    width: 140px;
+  }
+
+  .churchMoto h3{
+    /**margin-top: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color:   #0d674e;
+    **/
+    letter-spacing: 0.1px;
+    font-size: 14px;
+  }
+
+  .churchMoto p{
+    /**font-size: 14px;
+    line-height: 24px;
+    padding-right: 42%;
+    **/
+    font-size: 12px;
+  }
+
+  .about_description-text h3{
+    /**
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color:   #0d674e;
+    **/
+    letter-spacing: 0.1px;
+    font-size: 14px;
+  }
+
+  .about_description-text p{
+    /**font-size: 14px;
+    line-height: 24px;
+    padding-right: 10%;
+    min-width: 300px;
+    **/
+    font-size: 12px;
+  }
+
+
+}
+
+@media (max-width:320px) {
+  .redirection-link img{
+    width: 100px;
+  }
+
+
+}

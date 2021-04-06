@@ -1,365 +1,968 @@
 /* You can add global styles to this file, and also import other style files */
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  h2{
-      font-size: 2.875em;
-      text-transform: uppercase;
-  }
-
-  header{
-      overflow: hidden;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
 
 
-/*De-activated icons*/
-.hidden{
+h2{
+    font-size: 2.875em;
+    text-transform: uppercase;
+}
+
+header{
+    overflow: hidden;
+}
+
+.flex_nav img{
+  width: 50%;
+  position: relative;
+  top: 0px;
+  left: 0;
+}
+
+label #btn,
+label #cancel{
+    color: white;
+    font-size: 30px;
+
+    float: right;
+    /**margin-right: 40px;**/
+    cursor: pointer;
+    transition: .5s;
     display: none;
 }
 
+#show-menu{
+  display:none;
+}
+
+/*De-activated icons*/
+.hidden{
+  display: none;
+}
+
 .hidden_ul ul{
-    display: none;
+  display: none;
 }
 
 
 .red_top_bar{
-    height: 35px;
-    background: #C1272D;
+  position: relative;
+  z-index: 1;
+  height: 35px;
+  background: #C1272D;
 }
+
 .flex{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
 }
 
 .flex_nav{
-    align-items: center;
-    background: rgb(0, 0, 0, 91%);
-    color: white;
-    padding: 0 65px;
+  width: 100vw;
+  align-items: center;
+  background: rgb(0, 0, 0, 91%);
+  color: white;
+  padding: 0 65px;
 }
 
 .flex li{
-    list-style: none;
-    margin: 30px 0;
-    padding: 10px;
+  list-style: none;
+  margin: 30px 0;
+  padding: 5px;
 }
 
 /*Dropdown Menu*/
 .flex_nav .hidden_ul li{
-    position: relative;
-    top: 0px;
-    z-index: 4;
+  position: relative;
+  top: 0px;
+  z-index: 4;
 }
 .flex_nav a{
-    color: white;
+  color: white;
 
-    font-weight: regular;
-    text-transform: uppercase;
+  font-weight: regular;
+  text-transform: uppercase;
 }
 
 .flex_nav .Dash-B{
-    border: solid white 3px;
-    border-radius: 7px 0 0 7px;
-    padding: 10px 26px;
-    margin-right: -23px;
-    border-right: 0px;
+  border: solid white 3px;
+  border-radius: 7px 0 0 7px;
+  padding: 10px 26px;
+  margin-right: -23px;
+  border-right: 0px;
 }
 
 .flex_nav .Give-B{
-    background: #0d674ea9;
-    border: solid white 3px;
-    padding: 10px 21px;
-    border-left: 0;
-    border-radius: 0 7px 7px 0;
-    color: white
+  background: #0d674ea9;
+  border: solid white 3px;
+  padding: 10px 21px;
+  border-left: 0;
+  border-radius: 0 7px 7px 0;
+  color: white
 }
 .Give-text{
-    font-weight: 700;
-    letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 .hidden_ul li ul li{
-    margin: 0px;
+  margin: 0px;
 }
 
 .flex_nav .hidden_ul li:hover > ul{
-   display: block;
-   position: absolute;
-   top: 40px;
-   background: rgb(41, 41, 41);
-   padding: 2px;
+ display: block;
+ position: absolute;
+ top: 40px;
+ background: rgb(41, 41, 41);
+ padding: 2px;
 }
 .hidden_ul li ul li{
-    margin: 0px;
+  margin: 0px;
 }
 
 nav{
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 
 .vid-bg-section{
-    overflow: hidden;
+  overflow: hidden;
 }
+
+
 
 .img-bg-overlay img{
-  width: 100vw;
+width: 100vw;
 }
 .vid-bg-overlay{
-    z-index: -1;
-    width: 100%;
-    margin-top: -600px;
+  z-index: -1;
+  width: 100vw;
+  margin-top: -600px;
 }
 .banner-gradient {
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    /**background-image:
-    linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));**/
-    background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 1));
-    width: 100%;
-    height: 610px;
-    background-size: cover;
-    color: black;
-    text-align: center;
-    padding: 200px;
-}
-
-.others-banner-gradient{
   position: absolute;
+  z-index: 1;
   top: 10px;
+  /**background-image:
+  linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));**/
   background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 1));
+  linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 1));
   width: 100%;
-  height: 565px;
+  height: 595px;
+  background-size: cover;
+  color: black;
   text-align: center;
   padding: 200px;
 }
 
+.others-banner-gradient{
+position: absolute;
+z-index: 1;
+top: 2%;
+background-image:
+  linear-gradient(to right, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 1));
+
+max-height: 545px;
+width: 100%;
+padding: 10%;
+overflow: hidden;
+text-align: center;
+}
+
 .banner-text{
-    margin-top: 130px;
-    color: white;
+  margin-top: 130px;
+  color: white;
 
 }
 .banner-text p{
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .banner-links{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 .banner-text .pst-sermons{
-    border: 3px solid white;
-    padding: 10px 40px;
-    border-radius: 7px 0 0 7px;
-    color: #C1272D;
-    background: white;
-    font-weight: 700;
-    margin-right: 4px;
+  border: 3px solid white;
+  padding: 10px 40px;
+  border-radius: 7px 0 0 7px;
+  color: #C1272D;
+  background: white;
+  font-weight: 700;
+  margin-right: 4px;
 }
 
 .banner-text .events-cal{
-    border: 3px solid white;
-    padding: 10px 40px;
-    border-radius: 0 7px 7px 0;
-    color: white;
-    margin-left: 4px;
+  border: 3px solid white;
+  padding: 10px 40px;
+  border-radius: 0 7px 7px 0;
+  color: white;
+  margin-left: 4px;
 }
 
 .baseOtherHeader{
-  display: flex;
-  justify-content: space-between;
-  margin-top: -5px;
-  padding-top: 8px;
-  padding-left: 840px;
+display: flex;
+justify-content: space-between;
+margin-top: -5px;
+padding-top: 8px;
+padding-left: 840px;
 }
 .audioVideo a{
-  margin-left: 50px;
+margin-left: 50px;
 }
 
 .baseOtherHeader a{
-  color: white;
+color: white;
 }
 
 .logoutbtn a{
-  padding-right: 65px;
+padding-right: 65px;
 }
 
 .test_height{
   height: 680px;
   text-align: center;
 }
+
 .subfooter-bg-overlay{
-  background-image: url("./assets/img/sub_footer_B.png");
-  background-color: rgba(0, 0, 0, 0.96);
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  position: relative;
+background-image: url("./assets/img/sub_footer_B.png");
+background-color: rgba(0, 0, 0, 0.96);
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
 }
 
 .serviceTimes_text{
-  color: white;
+color: white;
+}
+
+.serviceTimes_img img{
+  max-width: 100%;
 }
 
 .subfooter_image_text{
-  display: flex;
-  justify-content: space-between;
-  padding: 60px 65px;
-  align-items: center;
+display: flex;
+justify-content: center;
+padding: 60px 65px;
+align-items: center;
 }
 
+
+
+
+
+
+
+
+/** My Tests **/
+.header_image_test{
+
+}
+
+/**background for Give**/
+.testheader-bg-overlay-give{
+  background-image: url("./assets/img/Give_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for Events**/
+.testheader-bg-overlay-events{
+  background-image: url("./assets/img/Events_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for AboutTheChurch**/
+.testheader-bg-overlay-AboutTheChurch{
+  background-image: url("./assets/img/AboutUs_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for Church-circuit**/
+.testheader-bg-overlay-ChurchCircuit{
+  background-image: url("./assets/img/Other_church_circuit_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for DailyBibleReading**/
+.testheader-bg-overlay-DailyBibleReading{
+  background-image: url("./assets/img/Daily_bible_reading_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+
+/**background for MembersDashboard**/
+.testheader-bg-overlay-MembersDashboard{
+  background-image: url("./assets/img/Members_dashboard_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for Ministries**/
+.testheader-bg-overlay-Ministries{
+  background-image: url("./assets/img/Ministries_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for pastSermonAudio**/
+.testheader-bg-overlay-pastSermonAudio{
+  background-image: url("./assets/img/past_sermon_video_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for pastSermonVideo**/
+.testheader-bg-overlay-pastSermonVideo{
+  background-image: url("./assets/img/past_sermon_video_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for purchasedBooks**/
+.testheader-bg-overlay-purchasedBooks{
+  background-image: url("./assets/img/Purchase_books_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+/**background for sateliteCommunity**/
+.testheader-bg-overlay-sateliteCommunity{
+  background-image: url("./assets/img/satellite_community_A.png");
+background-color: rgb(0, 0, 0);
+background-repeat: no-repeat;
+background-size: 100vw;
+position: relative;
+}
+
+
+
+
+
+
+
+
+.test-others-banner-gradient{
+  position: absolute;
+  z-index: 1;
+  top: 2%;
+  max-height: 545px;
+  width: 100%;
+  padding: 10%;
+  overflow: hidden;
+  text-align: center;
+  }
+
+  .test-banner-text{
+    margin-top: 10%;
+    color: white;
+
+  }
+
+  .test-banner-text p{
+    margin-top: 18px;
+  }
+
+  .red_bottom_bar{
+    position: relative;
+    z-index: 1;
+    height: 35px;
+    background: #C1272D;
+  }
+
+
+
+
+
+
+
+
+
+
 .subfooter_image_text h4{
-  font-size: 29px;
-  font-weight: bold;
-  padding-bottom: 10px;
+font-size: 29px;
+font-weight: bold;
+padding-bottom: 10px;
 }
 
 .underBorder{
-  background-color: #C1272D;
-  width: 70px;
-  height: 8px;
-  margin: 30px 0px;
+background-color: #C1272D;
+width: 70px;
+height: 8px;
+margin: 30px 0px;
 }
 
 .serviceTimes_text{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+text-align: right;
 
-  /**padding: 20px 0px;**/
+/**padding: 20px 0px;**/
 }
 
 .serviceTimes_text h5{
-  font-size: 19px;
-  font-weight: semiBold;
-  margin-bottom: 8px;
+font-size: 19px;
+font-weight: semiBold;
+margin-bottom: 8px;
 }
 
 .serviceTimes_text .redirect_links{
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+margin-top: 30px;
+display: flex;
+flex-direction: row;
+align-items: center;
 }
 
 .serviceTimes_text h5 span{
-  font-size: 16px;
-  word-spacing: 10px;
-  letter-spacing: 2px;
-  font-weight: normal;
+font-size: 16px;
+word-spacing: 10px;
+letter-spacing: 2px;
+font-weight: normal;
 }
 
 .redirect_links a{
-  margin-left: 50px;
-  color: white;
+margin-left: 50px;
+color: white;
 }
 
 .footer_content{
-  display: flex;
- /** margin: 40px auto; **/
-  justify-content: space-between;
-  padding: 40px 65px;
+display: flex;
+/** margin: 40px auto; **/
+justify-content: space-between;
+padding: 40px 65px;
 
 }
 
 .footer_content h6{
-  font-size: 17px;
-  color: white;
-  font-weight:normal;
-  padding-bottom: 10px;
-  border-bottom: white solid 2px;
+font-size: 17px;
+color: white;
+font-weight:normal;
+padding-bottom: 10px;
+border-bottom: white solid 2px;
 }
 
 .red_bg_footer{
-  background: #C1272D;
+background: #C1272D;
 }
 
 .menu_links{
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
+max-width: 420px;
+display: flex;
+flex-direction: column;
 }
 
 .menu_links a{
-  font-size: 16px;
-  color: white;
-  margin-top: 10px;
+font-size: 16px;
+color: white;
+margin-top: 10px;
 }
 
 .menu_links img{
-  width: 50%;
+width: 50%;
 }
 
 .pad_down p{
-  color: white;
-  font-size: 14px;
-  padding-top: 10px;
-  line-height: 25px;
-  word-spacing: 2px;
+color: white;
+font-size: 14px;
+padding-top: 10px;
+line-height: 25px;
+word-spacing: 2px;
 }
 
 .social_media{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 .dIcons img{
-  display: flex;
-  margin-left: 10px;
+display: flex;
+margin-left: 10px;
 }
 .pad_down{
-  padding: 20px 0px;
+padding: 20px 0px;
 }
 
 .lastBase{
-  display: flex;
-  justify-content: center;
-  padding: 20px 0px;
-  border-top: 1px solid rgba(255, 255, 255, 0.541);
+display: flex;
+justify-content: center;
+padding: 20px 0px;
+border-top: 1px solid rgba(255, 255, 255, 0.541);
 }
 
 .lastBase p{
-  margin-left: 10px;
-  color: rgba(255, 255, 255, 0.548);
+margin-left: 10px;
+color: rgba(255, 255, 255, 0.548);
 }
+
+
+/** Homepage **/
+.churchMoto h4{
+
+}
+
 /**hierachy of angular nav base framework and other components**/
 
 
 /** Media Query**/
 @media (max-width:1118px) {
+
+
+
+  h2{
+    font-size: 2.275em;
+    text-transform: uppercase;
+  }
+
     *{
-        font-size: 14px;
+      font-size: 14px;
     }
 
-    .red_top_bar{
-        height: 20px;
-    }
-    .flex_nav{
-        padding: 0 15px;
+  .red_top_bar{
+      height: 20px;
+  }
+  .flex_nav{
+      top: 20px;
+      padding: 10px 25px;
+  }
+
+
+
+  .flex li{
+      margin: 25px 0;
+  }
+
+  /**.banner-gradient{
+      top: -30px;
+      padding: 180px 100px 100px 100px;
+  }
+  **/
+
+  .vid-bg-overlay{
+    z-index: -1;
+    width: 100vw;
+    margin-top: -800px;
+  }
+
+  .banner-text{
+    margin-top:200px;
+    padding: 0px 25px;
+  }
+
+  .banner-gradient {
+    top: 10px;
+    /**background-image:
+    linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));**/
+    width: 100%;
+    height: 390px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .banner-text p{
+    margin-top: 15px;
+  }
+  .banner-links{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .banner-text .pst-sermons{
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 7px 0 0 7px;
+    color: #C1272D;
+    background: white;
+    font-weight: 700;
+    margin-right: 4px;
+  }
+
+  .banner-text .events-cal{
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 0 7px 7px 0;
+    color: white;
+    margin-left: 4px;
+  }
+
+
+/**main footer**/
+  .red_bg_footer p{
+    font-size: 10px;
+  }
+
+.footer_content{
+display: flex;
+/** margin: 40px auto; **/
+justify-content: space-between;
+padding: 40px 45px;
+
+}
+
+
+/**Test Other Banners**/
+
+.test-banner-text{
+  margin-top: 14%;
+  color: white;
+
+}
+
+.test-banner-text h2{
+  font-size: 2.175em;
+}
+
+.test-banner-text p{
+  margin-top: 10px;
+}
+
+.red_bottom_bar{
+  height: 30px;
+}
+
+
+
+/**sub-footer**/
+.subfooter_image_text{
+
+  padding: 60px 45px;
+  }
+
+  .subfooter_image_text{
+    /**display: flex;
+    justify-content: center;
+    padding: 60px 65px;
+    align-items: center;
+    **/
+
+  }
+
+  .serviceTimes_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    /**padding: 20px 0px;**/
     }
 
-    .flex_nav img{
-        width: 100%;
+    .serviceTimes_text h5{
+    font-size: 16px;
+    font-weight: semiBold;
+    margin-bottom: 8px;
     }
 
-    .flex li{
-        margin: 20px 0;
+    .serviceTimes_text .redirect_links{
+    margin-top: 10px;
+    display: flex;
     }
 
-    .banner-gradient{
-        top: -30px;
-        padding: 180px 100px 100px 100px;
+    .serviceTimes_text h4{
+      font-size: 20px;
     }
 
+    .serviceTimes_text h5 span{
+    font-size: 12px;
+    }
+
+    .redirect_links a{
+    margin-left: 10px;
+
+    }
+
+    .underBorder{
+      background-color: #C1272D;
+      width: 70px;
+      height: 4px;
+      margin: 20px 0px;
+      }
+
+}
+
+@media (max-width: 860px) {
+
+  .flex_nav{
+    top: 10px;
+    padding: 8px 15px;
+}
+
+.flex li{
+    margin: 15px 0;
+}
+
+.red_top_bar{
+  height: 15px;
+}
+
+.hidden_ul{
+  font-size: 18px;
+  z-index: -1;
+  position : absolute;
+  width: 100%;
+  padding: 50px 0 25px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #000000ee;
+  top: -400px;
+  padding-left: 0px;
+  left: 0;
+  text-align: center;
+  transition: all .5s;
+}
+
+.flex_nav .Dash-B{
+  border: none;
+  border-radius: none;
+  padding: 0px;
+  margin-right: 0px;
+  border-right: 0px;
+}
+
+.flex_nav .Give-B{
+  background:none;
+  border: none;
+  padding: 0px 0px;
+  border-left: 0;
+  border-radius: 0;
+  color: white
+}
+
+label #btn{
+  display: block;
+}
+
+.hidden_ul ul li a{
+  font-size: 12px;
+}
+.flex_nav .hidden_ul li{
+  transition: all .5s;
+}
+.flex_nav .hidden_ul li:hover > ul{
+  display: inline-flexbox;
+  position: static;
+  width: 100vw;
+  transition: all .5s;
+ }
+#show-menu:checked ~ .hidden_ul{
+  position: absolute;
+  top: 30px;
+}
+#show-menu:checked ~ label #btn{
+  display: none;
+}
+#show-menu:checked ~ label #cancel{
+  display: block;
+}
+
+h2{
+  font-size: 2.075em;
+}
+
+.banner-text{
+  margin-top:140px;
+  padding: 0px 20px;
+}
+
+.banner-gradient {
+  /**background-image:
+  linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));**/
+  height: 345px;
+}
+
+
+.banner-text .pst-sermons{
+  border: 2px solid white;
+  padding: 6px 10px;
+  border-radius: 7px 0 0 7px;
+  color: #C1272D;
+  background: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.banner-text .events-cal{
+  border: 2px solid white;
+  padding: 6px 10px;
+  border-radius: 0 7px 7px 0;
+  color: white;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/** Top of other Banners**/
+
+.test-banner-text{
+  margin-top: 10%;
+  color: white;
+
+}
+
+.test-banner-text h2{
+  font-size: 2.0em;
+}
+
+.test-banner-text p{
+  margin-top: 8px;
+}
+
+.red_bottom_bar{
+  height: 22px;
+}
+
+/**footer_main**/
+.footer_content{
+  display: flex;
+  /** margin: 40px auto; **/
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 45px;
+
+  }
+
+  /**Sub-footer**/
+  .subfooter_image_text{
+    flex-wrap: wrap;
+    }
+
+    .serviceTimes_text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: right;
+
+      /**padding: 20px 0px;**/
+      }
+
+      .serviceTimes_text .redirect_links{
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+
+        }
+
+      .serviceTimes_text .redirect_links a img{
+
+        width: 70%;
+
+      }
+
+      .subfooter_image_text{
+
+        padding: 10px 15px;
+        }
+
+        .vid-bg-overlay{
+          margin-top: -800px;
+        }
+}
+
+@media (max-width: 470px) {
+
+  *{
+    font-size: 12px;
+  }
+
+h2{
+  font-size: 24px;
+}
+
+.banner-text{
+  margin-top: 120px;
+  padding: 0px 25px;
+}
+
+/**footer_main**/
+.footer_content{
+  padding: 40px 15px;
+
+  }
+
+
+/**sub-footer**/
+
+
+/** Top of other Banners**/
+
+.test-banner-text{
+  margin-top: 13%;
+
+}
+
+.test-banner-text h2{
+  font-size: 1.4em;
+}
+
+.test-banner-text p{
+  margin-top: 1.5px;
+  font-size: 12px;
+}
+
+.red_bottom_bar{
+  height: 18px;
+}
+
+.flex_nav{
+  top: 10px;
+  padding: 0px 15px;
+}
+
+.vid-bg-overlay{
+  margin-top: -780px;
+}
+
+}
+
+@media (max-width: 317px) {
+
+  .banner-text{
+    margin-top: 100px;
+    padding: 0px 15px;
+  }
+
+  .banner-text .pst-sermons{
+
+    font-size: 10px;
+  }
+
+  .banner-text .events-cal{
+
+    font-size: 10px;
+  }
 }

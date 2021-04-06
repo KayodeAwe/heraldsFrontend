@@ -1,31 +1,71 @@
 
 <header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <!--<div class="red_top_bar"></div>
+  <div class="wrapper">
+    <nav>
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <img src="../assets/img/HERALDS_ICON.svg" alt="">
+        <ul>
+            <li class="dropdown"><a href="#">About</a>
+              <input class="hidden" type="checkbox" name="" id="show-ministries">
+              <label for="show-ministries"><span class="hidden"><i class="fas fa-plus"></i></span></label>
+              <ul>
+                  <li> <a routerLink="/ministries" routerLinkActive="active">Music</a></li>
+                  <li><a routerLink="/ministries" routerLinkActive="active">Welfare</a></li>
+                  <li><a routerLink="/ministries" routerLinkActive="active">Media</a></li>
+                  <li><a routerLink="/ministries" routerLinkActive="active">Outreach</a></li>
+                  <li><a routerLink="/ministries" routerLinkActive="active">Tentmakers</a></li>
+                  <li><a routerLink="/ministries" routerLinkActive="active">Ushering</a></li>
+                  <li><a routerLink="/ministries" routerLinkActive="active">Follow-up</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Ministries</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Give</a></li>
+        </ul>
+    </nav>
+  </div>
+
+  -->
       <nav>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
           <div class="red_top_bar"></div>
           <div class="flex flex_nav">
+
               <div class="logo"><a routerLink="" routerLinkActive="active"><img src="../assets/img/HERALDS_ICON.svg" alt="Heralds_icon"></a></div>
+              <input type="checkbox" name="" id="show-menu">
+              <label for="show-menu" class="menu-btn">
+                <i class="fas fa-bars fa-2x" id="btn"></i>
+                <i class="fas fa-times fa-2x" id="cancel"></i>
+              </label>
               <ul class="flex hidden_ul">
-                  <li>
-                      <a href="#">About</a>
+                  <li class="space_top">
+                      <a routerLink="/aboutTheChurch" routerLinkActive="active">About</a>
                   </li>
                   <li>
-                      <a href="#">Ministries <span class="hidden"><i class="fas fa-plus"></i></span></a>
+                      <a routerLink="/ministries" routerLinkActive="active">Ministries </a>
                       <input class="hidden" type="checkbox" name="" id="show-ministries">
-                      <label for="show-ministries"></label>
-                      <ul>
-                          <li> <a routerLink="/ministries" routerLinkActive="active">Music</a></li>
-                          <li><a routerLink="/ministries" routerLinkActive="active">Welfare</a></li>
-                          <li><a routerLink="/ministries" routerLinkActive="active">Media</a></li>
-                          <li><a routerLink="/ministries" routerLinkActive="active">Outreach</a></li>
-                          <li><a routerLink="/ministries" routerLinkActive="active">Tentmakers</a></li>
-                          <li><a routerLink="/ministries" routerLinkActive="active">Ushering</a></li>
-                          <li><a routerLink="/ministries" routerLinkActive="active">Follow-up</a></li>
-                      </ul>
+                      <label for="show-ministries"><span class="hidden"><i class="fas fa-plus"></i></span></label>
+                        <ul>
+                            <li> <a routerLink="/ministries" routerLinkActive="active">Music</a></li>
+                            <li><a routerLink="/ministries" routerLinkActive="active">Welfare</a></li>
+                            <li><a routerLink="/ministries" routerLinkActive="active">Media</a></li>
+                            <li><a routerLink="/ministries" routerLinkActive="active">Outreach</a></li>
+                            <li><a routerLink="/ministries" routerLinkActive="active">Tentmakers</a></li>
+                            <li><a routerLink="/ministries" routerLinkActive="active">Ushering</a></li>
+                            <li><a routerLink="/ministries" routerLinkActive="active">Follow-up</a></li>
+                        </ul>
                   </li>
                   <li>
-                      <a href="#">Resources <span class="hidden"><i class="fas fa-plus"></i></span></a>
+                      <a href="#">Resources </a>
                       <input class="hidden" type="checkbox" name="" id="show-resources">
-                      <label for="show-resources"></label>
+                      <label for="show-resources"><span class="hidden"><i class="fas fa-plus"></i></span></label>
                       <ul>
                           <li><a routerLink="/purchasedBooks" routerLinkActive="active">Books Store</a></li>
                           <li><a routerLink="/pastSermonAudio" routerLinkActive="active">Past Audio Sermons</a></li>
@@ -34,24 +74,22 @@
                       </ul>
                   </li>
                   <li>
-                      <a class="Dash-B" href="#">Dashboard <span class="hidden"><i class="fas fa-plus"></i></span></a>
+                      <a class="Dash-B" routerLink="/membersDashbord" routerLinkActive="active">Dashboard </a>
                       <input class="hidden" type="checkbox" name="" id="show-dashboard">
-                      <label for="show-dashboard"></label>
-                      <ul>
+                      <span class="hidden"> <label for="show-dashboard"><i class="fas fa-plus"></i></label></span>
+                      <ul><!--
                           <li><a href="#">Profile</a></li>
                           <li><a href="#">Login</a></li>
                           <li><a href="#">Register</a></li>
                           <li><a href="#">Logout</a></li>
+                          -->
                       </ul>
                   </li>
                   <li class="Give-text">
                       <a routerLink="/give" routerLinkActive="active" class="Give-B">Give</a>
                   </li>
               </ul>
-              <div class="hidden">
-                  <input type="checkbox" name="" id="show-menu">
-                  <label for="show-menu"><i class="fas fa-bars"></i></label>
-              </div>
+
           </div>
       </nav>
 

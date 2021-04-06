@@ -16,7 +16,7 @@ export class ChurchCircuitComponent implements OnInit {
       title: 'CHURCH CIRCUITS',
       subtitle: 'Study to shew thyself approved unto God, a workman that needeth not to be ashamed',
       logOutbtn: '',
-      img_src: "../assets/img/Other_church_circuits_B.png",
+      img_src: "testheader-bg-overlay-ChurchCircuit",
       audiobtn: '',
       videobtn: ''
     },

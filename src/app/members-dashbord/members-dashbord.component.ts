@@ -16,7 +16,7 @@ export class MembersDashbordComponent implements OnInit {
       title: 'MEMBERS DASHBOARD',
       subtitle: 'Members of the Household of Faith',
       logOutbtn: 'logout',
-      img_src: "../assets/img/Members_dashboard_B.png",
+      img_src: "testheader-bg-overlay-MembersDashboard",
       audiobtn: '',
       videobtn: ''
     },

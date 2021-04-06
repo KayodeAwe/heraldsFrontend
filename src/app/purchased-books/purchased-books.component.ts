@@ -16,7 +16,7 @@ export class PurchasedBooksComponent implements OnInit {
       title: 'PURCHASE',
       subtitle: ' Study to shew thyself approved unto God, a workman that needeth not to be ashamed',
       logOutbtn: '',
-      img_src: "../assets/img/Purchase_books_B.png",
+      img_src: "testheader-bg-overlay-purchasedBooks",
       audiobtn: '',
       videobtn: ''
     },

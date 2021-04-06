@@ -17,7 +17,7 @@ export class SateliteCommunityComponent implements OnInit {
       title: 'SATELITE COMMUNITY',
       subtitle: 'Welcome, to a warm Family',
       logOutbtn: '',
-      img_src: "../assets/img/Satellite_community_B.png",
+      img_src: "testheader-bg-overlay-sateliteCommunity",
       audiobtn: '',
       videobtn: ''
     }

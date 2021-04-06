@@ -17,7 +17,7 @@ export class GiveComponent implements OnInit {
       title: 'SACRIFICIAL GIVING',
       subtitle: 'Welcome, to a warm Family',
       logOutbtn: '',
-      img_src: "../assets/img/Give_A.png",
+      img_src: "testheader-bg-overlay-give",
       audiobtn: '',
       videobtn: ''
     },
