@@ -1,10 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="219" height="73" viewBox="0 0 219 73">
-  <g id="HERALDS_ICON" transform="translate(-115 -33)">
-    <text id="Heralds" transform="translate(164 84)" fill="#fff" font-size="49" font-family="Nunito-Regular, Nunito"><tspan x="0" y="0">Heralds</tspan></text>
-    <text id="INTERNATION_CHRISTIAN_CENTER" data-name="INTERNATION CHRISTIAN CENTER" transform="translate(168 99)" fill="#fff" font-size="10" font-family="Nunito-Light, Nunito" font-weight="300" letter-spacing="0.013em"><tspan x="0" y="0">INTERNATION CHRISTIAN CENTER</tspan></text>
-    <g id="Heralds_icon_2" transform="translate(115 33)">
-      <path id="Path_1" data-name="Path 1" d="M132.2,50.88c-4.121,9.757-4.7,14.873,1.632,23.208,2.078,2.765,13.068,12.946,14.09,22,.317,2.785,1.174,9.636-15.111,20.776,0,0,9.123,7.517,9.722,6.993,17.612-15.247,11.19-30.271,10.661-31.432C150.436,86.65,140.28,76.732,136.922,72.4A26,26,0,0,1,132.2,50.88Z" transform="translate(-114.047 -50.88)" fill="#c1272d"/>
-      <path id="Path_2" data-name="Path 2" d="M128.679,73c3.335,5.156,3.663,12.24-5.178,24.217-.364.474,12.47-.555,27.287-2.119v2.23s-28.121,4.874-28.332,5.2c-2.454,3.633,5.5,14.076,5.5,14.076-12.552-2.886-13.726-14.883-9.393-21.19,3.076-4.5,8.665-8.264,9.288-17.043.188-2.513.188-5.721.188-5.721A2.427,2.427,0,0,1,128.679,73Z" transform="translate(-116.279 -50.683)" fill="#c1272d"/>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="219" height="73" viewBox="0 0 219 73">
+    <g id="HERALDS_ICON" transform="translate(-115 -33)">
+      <text id="Heralds" transform="translate(164 84)" fill="#fff" font-size="49" font-family="Nunito-Regular, Nunito"><tspan x="0" y="0">Heralds</tspan></text>
+      <text id="INTERNATION_CHRISTIAN_CENTER" data-name="INTERNATION CHRISTIAN CENTER" transform="translate(168 99)" fill="#fff" font-size="10" font-family="Nunito-Light, Nunito" font-weight="300" letter-spacing="0.013em"><tspan x="0" y="0">INTERNATION CHRISTIAN CENTER</tspan></text>
+      <g id="Heralds_icon_2" transform="translate(115 33)">
+        <path id="Path_1" data-name="Path 1" d="M132.2,50.88c-4.121,9.757-4.7,14.873,1.632,23.208,2.078,2.765,13.068,12.946,14.09,22,.317,2.785,1.174,9.636-15.111,20.776,0,0,9.123,7.517,9.722,6.993,17.612-15.247,11.19-30.271,10.661-31.432C150.436,86.65,140.28,76.732,136.922,72.4A26,26,0,0,1,132.2,50.88Z" transform="translate(-114.047 -50.88)" fill="#c1272d"/>
+        <path id="Path_2" data-name="Path 2" d="M128.679,73c3.335,5.156,3.663,12.24-5.178,24.217-.364.474,12.47-.555,27.287-2.119v2.23s-28.121,4.874-28.332,5.2c-2.454,3.633,5.5,14.076,5.5,14.076-12.552-2.886-13.726-14.883-9.393-21.19,3.076-4.5,8.665-8.264,9.288-17.043.188-2.513.188-5.721.188-5.721A2.427,2.427,0,0,1,128.679,73Z" transform="translate(-116.279 -50.683)" fill="#c1272d"/>
+      </g>
     </g>
-  </g>
-</svg>
+  </svg>
+

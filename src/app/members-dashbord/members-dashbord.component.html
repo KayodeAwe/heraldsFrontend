@@ -1,9 +1,201 @@
 
-<!--<app-header-others [content] = "pageContent"></app-header-others>
--->
-<p class="test_height">members-dashbord works!</p>
+<app-header-others [content] = "pageContent"></app-header-others>
+<div class="aboutUs_section">
 
-<!--
-<app-footer-sub></app-footer-sub>
+  <div class="top_decor">
+    <p class="greenTitle">WELCOME:</p>
+    <p class="Hname"><span>HERALD</span>{{heraldName}}</p>
+  </div>
+
+  <div class="red_top_decor left_line_Style"></div>
+  <form [formGroup] = profileForm>
+    <div class="ProfileDiv left_line_Style">
+      <div class="ProfilePics seg ">
+        <div class="picsDiv peg">
+          <img [src] = "imageUrl" alt="">
+        </div>
+        <div class="picsButton peg">
+          <img src="../../assets/img/icons/Icon ionic-ios-camera.svg" alt="camera_icon">
+          <input type="file" class="choose_image_btn" name="" (change) = "upload($event)">
+        </div>
+      </div>
+      <div class="ProfileDetails">
+        <div class = "title_div">
+            <div class="info_title_div">
+              <p class="infoTitle_font">STEWARD DETAILS</p>
+            </div>
+            <div class="save_and_edit">
+              <div class="save_it align_it" (click) = "toggleMethod()"><p class = "save_p" >Edit</p></div>
+              <div class="edit_it align_it"(click) = "saveUpdate()"><p class = "edit_p" >Save</p></div>
+            </div>
+        </div>
+        <div class="fillDetails_div">
+          <div class="divName stdiv">
+            <label class="my_name mleft">NAME</label>
+            <input class="border_L mleft" type="text" placeholder="" formControlName = "Name" [readonly] = "tgle">
+          </div>
+          <div class="divName divSecond stdiv">
+            <div class="SecondDiv mleft">
+              <label for="">SQUAD</label>
+              <input type="text" class="border_lp mleft" placeholder="" formControlName = "Squad">
+            </div>
+            <div class="SecondDivRight">
+              <img src="" alt="">
+              <input type="text" class="border_lq" placeholder="" formControlName = "PhoneNumber">
+            </div>
+          </div>
+          <div class="divName divSecond stdiv">
+            <div class="SecondDiv mleft">
+              <label for="">CIRCUIT</label>
+              <input type="text" class="border_lp mleft" formControlName = "Circuit">
+            </div>
+            <div class="SecondDivRight">
+              <img src="" alt="">
+              <input type="text" class="border_lq" formControlName = "SatelliteCommunity">
+            </div>
+          </div>
+          <div class="divName stdiv">
+            <div class="divName stdiv DOBdiv">
+              <label class="my_name mleft">DATE OF BIRTH</label>
+              <input class="border_Lm mleft" type="date" formControlName = "DOB">
+            </div>
+          </div>
+          <div class="divName stdiv Emaildiv">
+            <label class="mleft">E-MAIL</label>
+            <input type="email" class="border_Lm m-left" formControlName = "Email" readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="below_decor"></div>
+    <div class="ProfileActivities">
+      <div class="tableHeader">
+        <p class = "activitiesDiv">Activities</p>
+      </div>
+      <table id="customers">
+        <tr>
+          <th>1</th>
+          <th>25th Nov. 2021</th>
+          <th>Graduated from Petra Academy</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+    </div>
+  <div class="below_decor"></div>
+</div>
+
+
+<app-footer-sub ></app-footer-sub>
 <app-footer-main></app-footer-main>
--->
+

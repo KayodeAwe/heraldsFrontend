@@ -1,2 +1,13 @@
 
 
+.underL{
+  border-bottom: 4px solid white;
+}
+
+.RightLogout{
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  margin-top: -5px;
+  padding: 0px 85px 0 0;
+}

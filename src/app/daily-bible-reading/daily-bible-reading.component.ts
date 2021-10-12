@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BibleServiceService } from '../services/bible-service.service';
 
 @Component({
   selector: 'app-daily-bible-reading',
@@ -7,10 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DailyBibleReadingComponent implements OnInit {
 
-  constructor() { }
+  Bbooks : Array<any> = ['Genesis', 'Exodus', 'Leviticus', 'Numbers',];
+  index = 0;
+
+  Cchapter:number = 0;
+
+  constructor(private _bibleService : BibleServiceService) { }
+
+  today: number = Date.now();
+
+
+
+  indexC(count:number){
+
+   // if(count == 0){
+      //this.Cchapter = count;
+    //}else {
+      this.Cchapter = (count + 1);
+    //}
+
+    console.log(this.Cchapter);
+    return this.Cchapter ;
+  }
 
   ngOnInit(): void {
   }
+
   public pageContent = {
     header:{
       title: 'BIBLE READING',
@@ -34,5 +57,7 @@ export class DailyBibleReadingComponent implements OnInit {
       pastorImg_link: '../../assets/img/Online_Service_times_B.png'
     }
   };
+
+
 
 }

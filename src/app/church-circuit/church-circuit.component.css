@@ -1,0 +1,304 @@
+.highlightHeader{
+  padding: 0.5% 1.5%;
+  border-radius: 2px;
+  background-color: #757572;
+}
+
+.highlightHeader h3{
+  color: white;
+}
+
+.btn-submit{
+  display: none;
+}
+
+.submitDiv label{
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  border-radius: 2px;
+  margin-top: 6px;
+  background-color: #C1272D;
+  color: white;
+  transition: 0.5s;
+}
+
+.submitDiv label:hover{
+  cursor: pointer;
+  background-color: #eb252c;
+}
+
+.submitDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newCircuitTopDiv{
+  background-color: rgba(240, 240, 240, 0.452);
+  padding: 1%;
+}
+
+.giveContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4%;
+}
+
+.top_decor_flex{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.top_decor{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top_decor img{
+  margin-right: 6px;
+  width: 25px;
+}
+
+.red_top_decor{
+  margin-top: 2%;
+  background-color: #C1272D;
+  height: 1px;
+  margin-left: 4%;
+  margin-bottom: 1%;
+}
+
+p{
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+h3{
+  /**margin: 2% 0 1% 0;*/
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color:   #0d674e;
+}
+
+.styleh3 h3{
+  color: white;
+}
+
+.below_decor{
+  background-color:  #C1272D;
+  height: 1px;
+  margin-top: 4%;
+  margin-bottom: 6%;
+  margin-right: 4%;
+}
+
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.RegisterNewCircuit{
+  display: flex;
+  justify-content: space-between;
+}
+
+.formdiv{
+  width: 65%;
+}
+
+.imgDiv{
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 1%;
+}
+
+.MjorAdress{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.CountryDiv{
+  width: 33%;
+}
+.StateDiv{
+  width: 33%;
+}
+.CityDiv{
+  width: 33%;
+}
+
+.centerPastor_CentreContact{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.halfDiv{
+  width: 49.5%;
+}
+
+.churchContactSection{
+  margin-top: 4%;
+}
+
+.space4{
+  margin-top: 1%;
+}
+
+.space8{
+  margin-top: 5%;
+}
+
+.space6{
+  margin-top: 2%;
+}
+
+.uploadBtnStyle{
+  display: none;
+}
+
+.custom-file-upload{
+  margin-top: 3%;
+  padding: 1%;
+  text-align: center;
+  background-color: #0D674E;
+}
+
+.custom-file-upload:hover{
+  cursor: pointer;
+}
+
+.form-control{
+  padding: 0.8%;
+  border: 1px solid #0D674E;
+  border-radius: 2px;
+}
+
+.select, .form-controlC{
+  border: 1px solid #0d674ee7;
+  padding: 5px;
+}
+
+label{
+  color: #0D674E;
+}
+
+select{
+  background-color: white;
+}
+
+.fg label{
+  color: white;
+}
+
+.imageCover{
+  width:100%;
+  border: 1px solid #C1272D;
+  border-radius: 4px;
+}
+
+small{
+  color: #C1272D;
+}
+
+.is-invalid{
+  border: 1px solid #C1272D;
+}
+
+@media (min-width:1611px) {
+
+
+}
+
+@media (max-width:1268px) {
+
+
+}
+
+@media (max-width:1078px) {
+
+
+}
+
+@media (max-width:950px) {
+
+
+}
+
+@media (max-width:816px) {
+  .top_decor img{
+    width: 20px;
+  }
+
+  p{
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 5% 0 1% 0;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:685px) {
+
+}
+
+@media (max-width:613px) {
+  .top_decor img{
+    width: 20px;
+  }
+
+  p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 5% 0 1% 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:513px) {
+
+}
+
+@media (max-width:415px) {
+
+  .top_decor img{
+    width: 15px;
+  }
+
+  p{
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 6% 0 1% 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:320px) {
+
+}

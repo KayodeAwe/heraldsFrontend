@@ -1,0 +1,95 @@
+
+<div class="DetailsDiv">
+    <!--
+    <div>
+      <iframe width="100%" height="600px" [src] = "video.url.replace('watch','embed')|safe" frameBorder = "0"></iframe>
+    </div>
+    -->
+
+  <body>
+
+    <div class="give_section">
+      <div class="main">
+
+            <!--- left part --->
+            <div class="left">
+
+              <!--- song img --->
+              <img id="track_image" [src] = "track_image">
+              <div class="volume">
+                    <p id="volume_show">{{volume_show}}</p>
+                    <i class="fa fa-volume-up" aria-hidden="true" (click) = "mute_sound()" id="volume_icon"></i>
+                    <input type="range" min="0" max="100" (change) ="volume_change()" id="volume" [(ngModel)] = "volume_">
+              </div>
+
+
+              <form *ngIf= "adminAccess">
+
+                <div class="centralizeForm">
+                  <p>Admin Access</p>
+                  <div *ngIf = "!editTitle" class="form-group">
+                    <label for="">Title</label>
+                    <input type="input" class="form-control" name = "name" required placeholder="name" [(ngModel)] = "SongFD.name">
+                  </div>
+                  <!--<h3 *ngIf = "!editTitle" (click) = "onTitleClick()">{{SongFD.name}}</h3>-->
+
+                  <div class="form-group">
+                    <label for="">Audio Url</label>
+                    <input type="input" class="form-control" name="path" required placeholder="path" [(ngModel)] = "SongFD.path">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">Image Url</label>
+                    <input type="input" class="form-control" name="img" required placeholder="img" [(ngModel)] = "SongFD.img">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">Preacher</label>
+                    <input type="input" class="form-control" name="singer" required placeholder="singer" [(ngModel)] = "SongFD.singer">
+                  </div>
+
+                  <div class="divbuttons">
+                    <button  type="button" (click) = "updateAudio()" class = "btn btn-primary">Update</button>
+                    <button  type="button" (click) = "deleteVideo()" class = "btn btn-danger">Delete</button>
+                  </div>
+
+                </div>
+
+              </form>
+
+              <!--<h3>{{index_no}}</h3>-->
+
+            </div>
+
+
+            <!--- right part --->
+            <div class="right">
+
+              <div class="show_song_no">
+              </div>
+
+              <!--- song title & artist name --->
+              <p id="title">{{title1}}</p>
+              <p id="artist">{{artist}}</p>
+
+              <!--- middle part --->
+              <div class="middle">
+                  <button [disabled] = "check_previous_button" (click) ="previous_song()" id="pre" [innerHTML]= "previous_"></button>
+                  <button (click) ="justplay()" id="play" [innerHTML] = "play_"></button>
+                  <button (click) ="next_song()" id="next" [innerHTML] = "next_"></button>
+              </div>
+
+              <!--- song duration part --->
+              <div class="duration">
+                  <input type="range" min="0" max="100" value="0" id="duration_slider" (change) = "change_duration()" [(ngModel)] = "slider">
+              </div>
+                  <button [style.background] = "auto_play ? 'rgba(255,255,255,0.2)' : 'rgba(168, 29, 29, 0.651)' " id="auto" (click) = "autoplay_switch()">Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+
+            </div>
+        </div>
+
+      </div>
+
+  </body>
+
+</div>

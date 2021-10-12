@@ -1,0 +1,23 @@
+<p>d-bible works!</p>
+<!--
+<ul *ngFor = " let count of sortedVersions['Yoruba']">
+  <li>{{count.name}}</li>
+</ul>-->
+<div class="CheckEvery" >
+  <ul *ngFor = " let counter of split_string">
+    <!--<li>{{count}}</li>-->
+    <div class="checkam" *ngIf= "counter">
+      <h4>{{counter}}</h4>
+      <ul *ngFor = " let count of sortedVersions[counter]">
+        <!--<li>{{count.name}}</li>-->
+        <li class="bible">
+          <a href="book.html?version={{count.id}}&abbr={{count.abbreviation}}"><abbr class="bible-version-abbr" title="{{count.name}}"> {{count.abbreviation}}</abbr>
+              <span> <span class="bible-version-name">{{count.name}}</span>{{count.description}}
+              </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </ul>
+</div>
+

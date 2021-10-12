@@ -1,0 +1,288 @@
+.aboutContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5% 4%;
+}
+
+.spacing_s{
+  padding: 0 0.5%;
+}
+.top_decor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+
+.top_decor img{
+  margin-top: 2%;
+  width: 22px;
+}
+
+.red_top_decor{
+  background-color: #C1272D;
+  height: 1px;
+  margin-left: 4%;
+}
+
+.ourBelieveContent img{
+  border-radius: 4px;
+  margin-right: 4%;
+  float: left;
+}
+
+/**
+.BelieveText h3{
+  margin-top: 0;
+  margin-bottom: 1%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color:   #0d674e;
+}
+**/
+p{
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+h3{
+  margin: 2% 0 1% 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 22px;
+  color:   #000000;
+}
+
+.bibleReading p{
+  font-size: 20px;
+  padding: 1% 0;
+
+}
+
+h2{
+  font-size: 25px;
+  color: #0D674D;
+  letter-spacing: 4px;
+  font-weight: 500;
+  padding: 1% 0 0 0;
+}
+
+.Bible_line{
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  margin: 0.5% 0 1.5% 0;
+  border-radius: 0 0 15px 0;
+}
+
+.below_decor{
+  background-color:  #C1272D;
+  height: 1px;
+  margin-bottom: 6%;
+  margin-right: 4%;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #ABA0A1;
+  float: left;
+  width: 80%;
+  background: #ffffff;
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #ffffff;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #ABA0A1;
+  border-radius: 0 6px 6px 0px;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #ffffff;
+}
+
+
+.bookCV{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+.Bversion{
+  width: 225px;
+  border: none;
+  border-bottom: 1px solid #474747;
+  padding: 3%;
+  font-size: 20px;
+}
+
+.middleContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.Bcontent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2% 0;
+}
+
+.top_header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.middleContent p{
+  font-size: 18px;
+  line-height: 35px;
+  word-spacing: 2px;
+  padding: 30px 0;
+}
+
+.middleContent h2{
+  font-size: 40px;
+  color: #000000;
+  font-weight: 500;
+  padding: 4%;
+}
+
+@media (min-width:1611px) {
+
+
+}
+
+@media (max-width:1268px) {
+
+
+}
+
+@media (max-width:1078px) {
+
+
+}
+
+@media (max-width:950px) {
+
+
+}
+
+@media (max-width:816px) {
+  .top_decor img{
+    width: 20px;
+  }
+  .ourBelieveContent img{
+    width: 35%;
+    margin-right: 10px;
+  }
+  p{
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 5% 0 1% 0;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+  .BelieveText h3{
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width:685px) {
+
+}
+
+@media (max-width:613px) {
+  .top_decor img{
+    width: 20px;
+  }
+
+  .ourBelieveContent img{
+    width: 30%;
+    margin-right: 10px;
+  }
+
+  p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 5% 0 1% 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+  .BelieveText h3{
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:513px) {
+
+}
+
+@media (max-width:415px) {
+
+  .top_decor img{
+    width: 15px;
+  }
+
+  .ourBelieveContent img{
+    width: 25%;
+    margin-right: 8px;
+  }
+
+  p{
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 6% 0 1% 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+  .BelieveText h3{
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:320px) {
+
+}

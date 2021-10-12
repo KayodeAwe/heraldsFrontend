@@ -1,0 +1,124 @@
+.fullDetails{
+  display: flex;
+}
+
+.infoAboutCircuit{
+  margin-left: 2%;
+}
+
+.cover{
+  background-color: rgb(243, 243, 243);
+  padding: 2% 1% 2% 0;
+}
+
+/**
+.leftA{
+}
+**/
+.blockborder{
+  border: 1px solid #0D674E;
+  width: 100%;
+  padding: 2px 0 2px 4px;
+  margin: 2px 0 4px 0;
+  background-color: white;
+  border-radius: 2px;
+  color: #0D674E;
+}
+
+.imgDiv{
+  width: 40%;
+}
+
+.infoAboutCircuit{
+  width: 100%;
+}
+
+.SocialMedia{
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin-top: 2%;
+}
+.SMLinks{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleSocial{
+  width: 40%;
+}
+.titleSocial p{
+  color: #C1272D;
+}
+
+.tTitle{
+  font-size: 14px;
+}
+
+.ttColor{
+  color: #C1272D;
+  font-weight: 600;
+}
+
+.SMLinks a .FBLinks{
+  width: 50px;
+  color: #C1272D;
+}
+
+.basebtn{
+  margin-top: 2%;
+  display: flex;
+}
+
+.basebtn button{
+  padding: 4px;
+  font-size: 16px;
+  margin-right: 6px;
+}
+.basebtnLeft button{
+  padding: 6px 8px;
+  color: white;
+  background-color: #0D674E;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.basebtnRight .adminC{
+  border: none;
+  background-color: #C1272D;
+  color: white;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 2px;
+}
+
+.updateC{
+  border: none;
+  background-color: #00acee;
+  cursor: pointer;
+  color: white;
+  border-radius: 2px;
+}
+.deleteC{
+  border: none;
+  background-color: #C1272D;
+  cursor: pointer;
+  color: white;
+  border-radius: 2px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.is-invalid{
+  border: 1px solid #C1272D;
+}
+
+.error-red{
+  color: #C1272D;
+}

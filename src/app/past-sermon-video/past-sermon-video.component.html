@@ -1,7 +1,85 @@
 
 <app-header-others [content] = "pageContent"></app-header-others>
 
-<p class="test_height">past-sermon-video works!</p>
+<!--<p class="test_height">past-sermon-video works!</p>-->
+
+<div class="give_section">
+  <div class="top_decor">
+    <img src="../../assets/img/give_page/Icon awesome-money-check.svg" alt="">
+  </div>
+  <div class="red_top_decor"></div>
+  <div class="giveContent">
+    <div class="Why_is_giving_important?">
+        <div class="testing-row">
+          <div class="t1">
+            <div *ngIf ="!hidenewVideo">
+
+              <div class="newVideoDiv">
+                <h3>New Video</h3>
+                <form [formGroup] = "newVideoForm" (ngSubmit) = "onSubmitAddVideo()" class="well">
+
+                  <div class="newVideoDiv2">
+                    <div class="form-group">
+                      <label>Topic</label>
+                      <input type="text" class="form-control" formControlName = "topic">
+                    </div>
+                    <div class="form-group">
+                      <label>Preacher</label>
+                      <input type="text" class="form-control" formControlName = "Preacher">
+                    </div>
+                    <div class="form-group">
+                      <label>Series</label>
+                      <input type="text" class="form-control" formControlName = "Series">
+                    </div>
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input type="date" class="form-control" formControlName = "Date_">
+                    </div>
+                    <div class="form-group">
+                      <label>Url</label>
+                      <input type="text" class="form-control" formControlName = "url">
+                    </div>
+                    <div class="form-group">
+                      <label>Summary</label>
+                      <input type="text" class="form-control" formControlName = "Summary">
+                    </div>
+                    <div class="form-group">
+                      <input type="file" class= "form-control" (change) = "upload($event)">
+                    </div>
+                  </div>
+                  <div class="baseS">
+                    <img [src]= "imageSrc" *ngIf= "imageSrc" style= "width:300px">
+                    <button type="submit" class="btn btn-success">Save</button>
+                  </div>
+
+                </form>
+              </div>
+
+            </div>
+            <video-detail (updateVideoEvent) = "onUpdateVideoEvent($event)"
+                            (deleteVideoEvent) = "onDeleteVideoEvent($event)"
+                      *ngIf = "selectedVideo && hidenewVideo"
+                      [video] = "selectedVideo">
+            </video-detail>
+            <video-details-latest *ngIf = "!selectedVideo && hidenewVideo"></video-details-latest>
+          </div>
+          <div class="t2">
+            <button (click) = "newVideo()" style="margin-bottom: 2px;" type="button" class = "btn btn-success btn-block">+New Video</button>
+            <video-list (SelectVideo) = "onSelectVideo($event)"
+                        (Search_filter) = "onSearchedVideo($event)"
+                        [videos] = "videos"
+                        [hideSelectionClass]= "hidenewVideo"></video-list>
+          </div>
+        </div>
+    </div>
+
+    <div>
+    </div>
+
+  </div>
+  <div class="below_decor"></div>
+</div>
+
 
 <app-footer-sub></app-footer-sub>
 <app-footer-main></app-footer-main>

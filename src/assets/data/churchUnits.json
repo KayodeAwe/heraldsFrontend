@@ -1,0 +1,18 @@
+ [
+  {
+    "unitCode" : "FOLLOW-UP",
+    "description" : "follow-up"
+  },
+  {
+    "unitCode" : "EVANGELISM",
+    "description" : "Evangelism"
+  },
+  {
+    "unitCode" : "TENTMAKERS",
+    "description" : "Tentmakers"
+  },
+  {
+    "unitCode" : "CHOIR",
+    "description" : "Choir"
+  }
+]

@@ -1,9 +1,190 @@
 
-<!--<app-header-others [content] = "pageContent"></app-header-others>-->
+<app-header-others [content] = "pageContent"></app-header-others>
 
-<p class="test_height">church-circuit works!</p>
+<div class="give_section">
+  <div class = "top_decor_flex">
+    <div class="top_decor">
+      <img src="../../assets/img/ChurchCircuit_page/Icon map-church.svg" alt="">
+      <h3>LOCATION CIRCUITS, <SPan>{{today | date:'yyyy'}}</SPan></h3>
+    </div>
+  </div>
+  <div class="red_top_decor"></div>
 
-<!--<app-footer-sub></app-footer-sub>
+  <div class="giveContent">
+
+    <div class="newCircuitTopDiv" *ngIf = "toggleList && !hidenewCircuit">
+      <div class="newAudioContainer">
+        <div class = "styleh3">
+          <h3 class="highlightHeader">New Circuit Upload Form</h3>
+        </div>
+        <form [formGroup] = "newCircuitForm" (ngSubmit) = "onSubmitAddCircuit()">
+            <div class="RegisterNewCircuit space6">
+                <div class="formdiv">
+                        <div class="form-group">
+                            <label> Name of Centre </label>
+                            <input type="text" class= "form-control" formControlName = "nameOfCentre" [class.is-invalid]= "(newCircuitForm.get('nameOfCentre').invalid && newCircuitForm.get('nameOfCentre').touched) || (newCircuitForm.get('nameOfCentre').invalid && unsuccessful) ">
+                            <div *ngIf = "(newCircuitForm.get('nameOfCentre').invalid && newCircuitForm.get('nameOfCentre').touched) || (newCircuitForm.get('nameOfCentre').invalid && unsuccessful)">
+                              <small class="error-red" *ngIf ="newCircuitForm.get('nameOfCentre').errors?.required" >*Pls type in the Circuit name</small>
+                            </div>
+                        </div>
+                        <div class="MjorAdress space4">
+                              <div class="form-group CountryDiv">
+                                  <label> Country </label>
+                                  <!--<input type="text" class= "form-control" formControlName = "country" >-->
+                                  <select (change) = "changeState()" placeholder="Select country" class = "select form-control" formControlName = "country" [class.is-invalid]= "(newCircuitForm.get('country').invalid && newCircuitForm.get('country').touched) || (newCircuitForm.get('country').invalid && unsuccessful)">
+                                    <option value="">Select country</option>
+                                    <ng-container *ngFor = "let country of CountryCategories$">
+
+                                      <option [value]= "country.name">{{country.name}}</option>
+
+                                    </ng-container>
+
+                                  </select>
+                                  <div *ngIf = "(newCircuitForm.get('country').invalid && newCircuitForm.get('country').touched) || (newCircuitForm.get('country').invalid && unsuccessful)">
+                                    <small class="error-red" *ngIf ="newCircuitForm.get('country').errors?.required" >*Country required</small>
+                                  </div>
+                              </div>
+
+                              <div class="form-group StateDiv">
+                                  <label> State </label>
+                                  <!--<input type="text" class= "form-control" formControlName = "state">-->
+                                  <select placeholder="Select State" class = "select form-control" formControlName = "state" [class.is-invalid]= "(newCircuitForm.get('state').invalid && newCircuitForm.get('state').touched) || (newCircuitForm.get('state').invalid && unsuccessful)">
+                                    <option value="">Select state</option>
+
+                                      <ng-container *ngFor = "let state_chosen of listOfStates">
+
+                                      <option [value]= "state_chosen.name">{{state_chosen.name}}</option>
+
+                                      </ng-container>
+
+
+                                  </select>
+                                  <div *ngIf = "(newCircuitForm.get('state').invalid && newCircuitForm.get('state').touched) || (newCircuitForm.get('state').invalid && unsuccessful)">
+                                    <small class="error-red" *ngIf ="(newCircuitForm.get('state').errors?.required)" >*State required</small>
+                                  </div>
+                              </div>
+                              <div class="form-group CityDiv">
+                                <label> City </label>
+                                <input type="text" class= "form-controlC form-control" formControlName = "city" [class.is-invalid]= "(newCircuitForm.get('city').invalid && newCircuitForm.get('city').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+                                <div *ngIf = "(newCircuitForm.get('city').invalid && newCircuitForm.get('city').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+                                  <small class="error-red" *ngIf ="newCircuitForm.get('city').errors?.required" >*City name required</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group space4">
+                            <label> Street</label>
+                            <input type="text" class= "form-control form-control" formControlName = "street" [class.is-invalid]= "(newCircuitForm.get('street').invalid && newCircuitForm.get('street').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+                            <div *ngIf = "(newCircuitForm.get('street').invalid && newCircuitForm.get('street').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+                              <small class="error-red" *ngIf ="newCircuitForm.get('street').errors?.required" >*Street name required</small>
+                            </div>
+                        </div>
+                        <div class="form-group space4">
+                            <label> Address </label>
+                            <!--<input type="text" class= "form-control" formControlName = "address">-->
+                            <textarea  class= "form-control" formControlName = "address" rows="4" cols="50" [class.is-invalid]= "(newCircuitForm.get('address').invalid && newCircuitForm.get('address').touched) || (newCircuitForm.get('address').invalid && unsuccessful)"></textarea>
+                            <div *ngIf = "(newCircuitForm.get('address').invalid && newCircuitForm.get('address').touched) || (newCircuitForm.get('address').invalid && unsuccessful)">
+                              <small class="error-red" *ngIf ="newCircuitForm.get('address').errors?.required" >*full Address required</small>
+                            </div>
+                        </div>
+
+                        <div class="churchContactSection space4">
+                                <div class="centerPastor_CentreContact">
+                                  <div class="form-group halfDiv">
+                                    <label> Pastor In Charge </label>
+                                    <input type="text" class= "form-control" formControlName = "pastorInCharge" [class.is-invalid]= "(newCircuitForm.get('pastorInCharge').invalid && newCircuitForm.get('pastorInCharge').touched) || (newCircuitForm.get('pastorInCharge').invalid && unsuccessful)">
+                                    <div *ngIf = "(newCircuitForm.get('pastorInCharge').invalid && newCircuitForm.get('pastorInCharge').touched) || (newCircuitForm.get('pastorInCharge').invalid && unsuccessful)">
+                                      <small class="error-red" *ngIf ="newCircuitForm.get('pastorInCharge').errors?.required" >*Pastor required</small>
+                                    </div>
+                                  </div>
+                                  <div class="form-group halfDiv">
+                                    <label> Centre Phone Number </label>
+                                    <input type="text" class= "form-control" formControlName = "centerPhoneNumber" [class.is-invalid]= "(newCircuitForm.get('centerPhoneNumber').invalid && newCircuitForm.get('centerPhoneNumber').touched) || (newCircuitForm.get('centerPhoneNumber').invalid && unsuccessful)">
+                                    <div *ngIf = "(newCircuitForm.get('centerPhoneNumber').invalid && newCircuitForm.get('centerPhoneNumber').touched) || (newCircuitForm.get('centerPhoneNumber').invalid && unsuccessful)">
+                                      <small class="error-red" *ngIf ="newCircuitForm.get('centerPhoneNumber').errors?.required" >*Contact required</small>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group space4">
+                                    <label> Facebook Link </label>
+                                    <input type="text" class= "form-control" formControlName = "facebookLink">
+                                </div>
+                                <div class="form-group space4">
+                                    <label> Instagram Link </label>
+                                    <input type="text" class= "form-control" formControlName = "instagramLink">
+                                </div>
+                                <div class="form-group space4">
+                                    <label> Twitter Link </label>
+                                    <input type="text" class= "form-control" formControlName = "twitterLink">
+                                </div>
+                        </div>
+                </div>
+
+                <div class="imgDiv">
+
+                  <img src= "../../assets/img/ChurchCircuit_page/churchThumbnail.jpg" *ngIf= "!imageSrc" class = "imageCover">
+                  <img [src]= "imageSrc" *ngIf= "imageSrc" class = "imageCover">
+                  <div class="form-group fg">
+                    <!--<input type="text" class= "form-control" required name ="img" ngModel>-->
+                    <label for="file-upload" class="custom-file-upload">Upload</label>
+                    <input type="file" id="file-upload" class= "uploadBtnStyle" (change) = "upload($event)">
+                    <small *ngIf = "!perfectImg">*Ensure the image dimension is 400 x 400 and image size is less than 200kb</small>
+                    <div class="space4">
+                      <small *ngIf = "largeSize">Error: File size greater than 200kb</small>
+                      <br>
+                      <small *ngIf = "WrongImgFormat">Error: Image format must be Jpg or png</small>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="newAudiosubmitContainer">
+            <button type="submit" class = "btn-submit" id="Submit-button">Save</button>
+            <small *ngIf = "unsuccessful && !(file)">Kindly check the form fields and also ensure the Church image is uploaded</small>
+          </div>
+
+        </form>
+        <div class="submitDiv">
+          <label for="Submit-button">Submit</label>
+        </div>
+      </div>
+    </div>
+    <church-circuit-details *ngIf = "!toggleList" [chosenCircuitDetails] = "chosenCircuit"
+                            (SwitchOnList) = "onSwitchOnList($event)"
+                            (updateCircuitEvent) = "onupdateCircuitEvent($event)"
+                            (deleteCircuitEvent) = "ondeleteCircuitEvent($event)"></church-circuit-details>
+    <church-circuit-list *ngIf = "toggleList && hidenewCircuit" [countriesData] = "CountryCategories$"
+                          [SwitchDivStyle] = "!CircuitsEmpty"
+                          [circuitsData] = "Circuits"
+                          (state_filter) = "onStateSearched($event)"
+                          (country_filter) = "onCountrySearched($event)"
+                          (UnhideForm) = "onUhideForm($event)"
+                          (chosenCircuitEmitter) = "onchosenCircuitEmitter($event)">
+                                          </church-circuit-list>
+
+    <call-for-envangelism *ngIf = "CircuitsEmpty && hidenewCircuit"></call-for-envangelism>
+
+    <ul *ngIf= "hide" class="audiosS">
+      <li class="audioThumbnails"  *ngFor = "let circuit of Circuits">
+        <div class="container">
+          <img class= "testHover" (click) = "onSelect(song)" [src]= "circuit.img" alt= "circuit.nameOfCentre" width="400px">
+          <div class="middle">
+            <div class="text"></div>
+            <!--<img class="justMouse" (click) = "onSelect(song)" src="../../assets/img/past_sermon_audio/play-button.svg" alt="">-->
+          </div>
+        </div>
+        <div class="TitleSection">
+          <h4 class = "TitleStyle">{{ circuit.nameOfCentre }}</h4>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+  <div class="below_decor"></div>
+</div>
+
+
+
+<app-footer-sub></app-footer-sub>
 <app-footer-main></app-footer-main>
 
--->

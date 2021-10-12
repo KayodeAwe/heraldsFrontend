@@ -1,6 +1,88 @@
-<app-header-others [content] = "pageContent"></app-header-others> 
-<p class="test_height">past-sermon-audio works!</p>
+<app-header-others [content] = "pageContent"></app-header-others>
 
-<app-footer-sub [content_footer] = "pageContent.subfooter"></app-footer-sub>
+<!--Media Player Section-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+  <div class="give_section">
+
+    <div class="top_decor">
+      <img src="../../assets/img/give_page/Icon awesome-money-check.svg" alt="">
+    </div>
+    <div class="red_top_decor"></div>
+    <div class="giveContent">
+
+
+
+      <div>
+        <div class="newAudioTopDiv" *ngIf = "!hidenewAudio">
+          <div class="newAudioContainer">
+            <h3>New Audio</h3>
+            <form [formGroup] = "newAudioForm" (ngSubmit) = "onSubmitAddAudio()">
+
+            <div class="formdiv">
+                    <div class="form-group">
+                        <label> Name </label>
+                        <input type="text" class= "form-control" formControlName = "name" >
+                    </div>
+                    <div class="form-group">
+                        <label> Url </label>
+                        <input type="text" class= "form-control" formControlName = "path" >
+                    </div>
+
+                    <div class="form-group">
+                        <label> Preacher </label>
+                        <input type="text" class= "form-control" formControlName = "singer">
+                    </div>
+                    <div class="form-group">
+                      <!--<input type="text" class= "form-control" required name ="img" ngModel>-->
+                      <input type="file" class= "form-control" (change) = "upload($event)">
+                    </div>
+            </div>
+
+              <img [src]= "imageSrc" *ngIf= "imageSrc" style= "width:300px">
+
+              <div class="newAudiosubmitContainer">
+                <button type="submit" class = "btn btn-success">Save</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <audio-detail *ngIf = "selectedAudio && hidenewAudio"
+                    (nextAudioEvent) = "onNextClick($event)"
+                    (updateAudioEvent) = "onUpdateAudioEvent($event)"
+                    (deleteAudioEvent) = "onDeleteAudioEvent($event)"
+        [SongFD] = "selectedAudio" [index_no] = "index"></audio-detail>
+      </div>
+      <div class="SeeMoreButton">
+        <p *ngIf= "selectedAudio">Toggle Messages</p>
+        <button (click) = "toggle_All_audios()" *ngIf= "selectedAudio">
+          <p class="scroll-down"><a class="animate">More</a></p>
+        </button>
+      </div>
+      <div class="AlignClass" *ngIf = "!selectedAudio || seeAll">
+        <button (click) = "newAudio()" type="button" class = "btn">+New Audio</button>
+        <audio-list [class.HelpTransition]= "seeAll"
+              (SelectSong) = "onSelectSong($event)"
+              (Search_filter) = "onSearched($event)"
+              [All_song] = "All_song">
+        </audio-list>
+      </div>
+
+    </div>
+    <div class="below_decor"></div>
+  </div>
+
+
+
+</body>
+
+
+<!--[content_footer] = "pageContent.subfooter"-->
+
+<app-footer-sub></app-footer-sub>
 <app-footer-main></app-footer-main>
 

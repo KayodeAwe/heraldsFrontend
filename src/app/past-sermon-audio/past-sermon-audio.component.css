@@ -1,0 +1,474 @@
+
+.main{
+	position: relative;
+	height: 80%;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #5D6D7E, #566573);
+}
+
+
+.giveContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4%;
+
+}
+
+.top_decor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.top_decor img{
+  margin-top: 2%;
+  width: 40px;
+}
+
+.red_top_decor{
+  margin-top: 2%;
+  background-color: #C1272D;
+  height: 1px;
+  margin-left: 4%;
+}
+
+p{
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+h3{
+  margin: 2% 0 1% 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color:   #0d674e;
+}
+
+.below_decor{
+  background-color:  #C1272D;
+  height: 1px;
+  margin-top: 2%;
+  margin-bottom: 6%;
+  margin-right: 4%;
+}
+
+.account_details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.AlignClass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn{
+  padding: 8px;
+  margin: 8px 0 4px 0;
+  border: none;
+  color: #0D674E;
+}
+
+
+.HelpTransition {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+
+  .SeeMoreButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .SeeMoreButton p{
+    font-size: 18px;
+    padding: 5px;
+    color: #0D674E;
+  }
+
+  .SeeMoreButton button{
+    border-radius: 75px;
+    background-color: #c1272cf3;
+    border: none;
+  }
+
+  .newAudioTopDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .newAudioContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black 2px solid;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 12px;
+  }
+
+  .newAudiosubmitContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+  }
+
+  .form-group{
+    margin: 8px 0;
+  }
+
+  .newAudiosubmitContainer button{
+    background-color: #0D674E;
+    color: white;
+    border-radius: 4px;
+    width: 100px;
+  }
+
+
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+
+
+
+  @-webkit-keyframes pulse {
+    0% {
+      opacity: 0;
+      background-position: center top;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+    10% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      -moz-background-size: 75% auto;
+      -o-background-size: 75% auto;
+      -webkit-background-size: 75% auto;
+      background-size: 75% auto;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      background-position: center bottom;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+  }
+  @-moz-keyframes pulse {
+    0% {
+      opacity: 0;
+      background-position: center top;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+    10% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      -moz-background-size: 75% auto;
+      -o-background-size: 75% auto;
+      -webkit-background-size: 75% auto;
+      background-size: 75% auto;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      background-position: center bottom;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+  }
+  @-ms-keyframes pulse {
+    0% {
+      opacity: 0;
+      background-position: center top;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+    10% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      -moz-background-size: 75% auto;
+      -o-background-size: 75% auto;
+      -webkit-background-size: 75% auto;
+      background-size: 75% auto;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      background-position: center bottom;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      opacity: 0;
+      background-position: center top;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+    10% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      -moz-background-size: 75% auto;
+      -o-background-size: 75% auto;
+      -webkit-background-size: 75% auto;
+      background-size: 75% auto;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      background-position: center bottom;
+      -moz-background-size: 0 auto;
+      -o-background-size: 0 auto;
+      -webkit-background-size: 0 auto;
+      background-size: 0 auto;
+    }
+  }
+
+  .scroll-down {
+    margin: 0;
+    border: 2px solid #fff;
+    -moz-border-radius: 75px;
+    -webkit-border-radius: 75px;
+    border-radius: 100px;
+    position: relative;
+
+    width: 75px;
+    height: 75px;
+  }
+  .scroll-down a {
+    display: block;
+    opacity: 0;
+    -moz-border-radius: 75px;
+    -webkit-border-radius: 75px;
+    border-radius: 75px;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    -moz-background-size: 0 auto;
+    -o-background-size: 0 auto;
+    -webkit-background-size: 0 auto;
+    background-size: 0 auto;
+    -webkit-animation: pulse 1.5s 0s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0s infinite normal ease forwards;
+    animation: pulse 1.5s 0s infinite normal ease forwards;
+    background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");
+    background-repeat: no-repeat;
+  }
+  .scroll-down a:before, .scroll-down a:after {
+    content: " ";
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat center top;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .scroll-down a:before {
+    -webkit-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0.25s infinite normal ease forwards;
+    animation: pulse 1.5s 0.25s infinite normal ease forwards;
+  }
+  .scroll-down a:after {
+    -webkit-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    -moz-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    -o-animation: pulse 1.5s 0.5s infinite normal ease forwards;
+    animation: pulse 1.5s 0.5s infinite normal ease forwards;
+  }
+  .scroll-down a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1611px) {
+
+
+}
+
+@media (max-width:1268px) {
+
+
+}
+
+@media (max-width:1078px) {
+
+
+}
+
+@media (max-width:950px) {
+
+
+}
+
+@media (max-width:816px) {
+  .top_decor img{
+    width: 20px;
+  }
+
+  p{
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 5% 0 1% 0;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width:685px) {
+
+}
+
+@media (max-width:613px) {
+  .top_decor img{
+    width: 20px;
+  }
+
+  p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 5% 0 1% 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:513px) {
+
+}
+
+@media (max-width:415px) {
+
+  .top_decor img{
+    width: 15px;
+  }
+
+  p{
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  h3{
+    margin: 6% 0 1% 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width:320px) {
+
+}
+
+

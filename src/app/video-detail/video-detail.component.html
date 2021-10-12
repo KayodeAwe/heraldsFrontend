@@ -1,0 +1,43 @@
+<!--{{video.topic}}
+{{video.Preacher}}
+{{video.Series}}
+{{video.Date_}}
+{{video.url}}
+{{video.Summary}}
+-->
+
+
+<div class="DetailsDiv">
+  <div>
+    <iframe width="100%" height="664px" [src] = "video.url.replace('watch','embed')|safe" frameBorder = "0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <form>
+    <div *ngIf = "editTitle" class="form-group">
+      <input type="input" class="form-control" name = "topic" required placeholder="topic" [(ngModel)] = "video.topic">
+    </div>
+    <h3 *ngIf = "!editTitle" (click) = "onTitleClick()">{{video.topic}}</h3>
+
+    <div class="form-group">
+      <input type="input" class="form-control" name="Preacher" required placeholder="Preacher" [(ngModel)] = "video.Preacher">
+    </div>
+
+    <div class="form-group">
+      <input type="input" class="form-control" name="Series" required placeholder="Series" [(ngModel)] = "video.Series">
+    </div>
+
+    <div class="form-group">
+      <input type="input" class="form-control" name="Date_" required placeholder="Date" [(ngModel)] = "video.Date_">
+    </div>
+
+    <div class="form-group">
+      <input type="input" class="form-control" name="url" required placeholder="url" [(ngModel)] = "video.url">
+    </div>
+
+    <div class="form-group">
+      <textarea class = "form-control" rows="5" name="Summary" [(ngModel)] = "video.Summary"></textarea>
+    </div>
+
+    <button  type="button" (click) = "updateVideo()" class = "btn btn-primary">Update</button>
+    <button  type="button" (click) = "deleteVideo()" class = "btn btn-danger">Delete</button>
+  </form>
+</div>

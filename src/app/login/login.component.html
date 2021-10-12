@@ -1,0 +1,80 @@
+<div class="FullBody">
+
+  <div class="coverDiv">
+    <div class="FormDetails">
+      <div class="RegisterTitle">
+        <h5>LOGIN</h5>
+        <div class="underReg"></div>
+        <div class="subtitleL">
+          <p>To your Heralds account</p>
+        </div>
+      </div>
+      <form [formGroup] = "loginForm" (ngSubmit) = "loginSubmit()">
+
+        <div class="userDetails">
+
+          <div class="EmailDiv"><input class = "inputForm_ Wdt Pd" type="email" [class.is-invalid] = "loginForm.get('email').invalid && loginForm.get('email').touched" formControlName = "email" placeholder="Email"></div>
+
+          <div *ngIf = "loginForm.get('email').invalid && loginForm.get('email').touched">
+            <small class="error-red" *ngIf = "loginForm.get('email').errors?.required" >Email is required</small>
+            <small class="error-red" *ngIf = "loginForm.get('email').errors?.minlength" >At least 3 Characters</small>
+          </div>
+
+          <div class="passwordDiv">
+            <input class = "inputForm_ Wdt Dd" type="password" [class.is-invalid] = "loginForm.get('passWord').invalid && loginForm.get('passWord').touched" formControlName = "passWord" placeholder="Password">
+
+            <div *ngIf = "loginForm.get('passWord').invalid && loginForm.get('passWord').touched">
+              <small class="error-red" *ngIf = "loginForm.get('passWord').errors?.required" >Password is required</small>
+              <small class="error-red" *ngIf = "loginForm.get('passWord').errors?.minlength" >At least 5 Characters</small>
+            </div>
+
+          </div>
+
+          <button [disabled]= "!loginForm.valid" class="BWdt" type="submit">Sign in</button>
+
+          <!--{{loginForm.value | json}}-->
+
+          <div class="CenterAlignN">
+            <div class="signUpInfo">
+              <div class="leftL"></div>
+              <div class="middleInfo"><p class="TandC">No account? Let's do this</p></div>
+              <div class="leftL"></div>
+            </div>
+            <div class="CreateAnAccount">
+              <a routerLink="/registration"class="CanAct" type="submit">create an account </a>
+              <p>Forgot password?</p>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="pinkInfo">
+      <div class="firstDiv">
+        <h2>Join our Community</h2>
+        <p>Create an account as a<br>
+          Herald supplying all required<br>
+          information.</p>
+      </div>
+      <div class="firstDiv SecondDiv">
+        <h2>Get involved</h2>
+        <p>Participate in all the activities<br>
+          of your Squad. Enjoy the Military<br>
+          Drill and Family feel.</p>
+      </div>
+      <div class="firstDiv">
+        <h2>Manage your Profile</h2>
+        <p>Update your Profile regularly,<br>
+          using the Edit profile.
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+<app-footer-sub ></app-footer-sub>
+<app-footer-main></app-footer-main>

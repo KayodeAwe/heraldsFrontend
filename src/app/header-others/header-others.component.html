@@ -17,14 +17,13 @@
   </div>
 </div>
 
-<div class="baseOtherHeader red_bottom_bar">
+<div class="baseOtherHeader red_bottom_bar" [class.RightLogout] = "content.header.logOutbtn">
   <div class="audioVideo">
-    <a href="#">{{content.header.videobtn}}</a>
-    <a href="#">{{content.header.audiobtn}}</a>
+    <a routerLink="/pastSermonVideo" routerLinkActive="active" *ngIf = "content.header.videobtn" [class.underL] = "!content.header.vidA">{{content.header.videobtn}}</a>
+    <a routerLink="/pastSermonAudio" routerLinkActive="active" *ngIf = "content.header.audiobtn" [class.underL] = "content.header.vidA">{{content.header.audiobtn}}</a>
   </div>
-  <div class="logoutbtn">
-    <a href="#">{{content.leader.logOutbtn}}</a>
-  </div>
+  <a href="#" *ngIf = "content.header.logOutbtn" (click)= "_authService.logoutUser()" >{{content.header.logOutbtn}}</a>
+
 </div>
 
 <!--

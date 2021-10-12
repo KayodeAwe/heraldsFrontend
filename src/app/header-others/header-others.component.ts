@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { RegistrationService } from '../services/registration.service';
 
 @Component({
   selector: 'app-header-others',
@@ -9,9 +10,10 @@ export class HeaderOthersComponent implements OnInit {
 
   @Input() content:any;
 
-  constructor() { }
+  constructor( private _authService : RegistrationService) { }
 
   ngOnInit(): void {
   }
+ //vidA = true;
 
 }

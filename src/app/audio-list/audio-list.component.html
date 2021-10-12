@@ -1,0 +1,27 @@
+
+<div class="theHeader">
+  <div class="centralizeSearch">
+    <input type="text" name="messageName" [(ngModel)]= "messageName" placeholder="Enter the message title">
+    <button (click) = "SearchfromDetail()" class="SearchIcon"><i class="fa fa-search"></i></button>
+  </div>
+</div>
+
+<ul class="audiosS">
+  <li class="audioThumbnails"  *ngFor = "let song of All_song | paginate: { itemsPerPage: 9, currentPage: p }">
+    <div class="container">
+      <img class= "testHover" (click) = "onSelect(song)" [src]= "song.img" alt= "song.name" width="300px">
+      <div class="middle">
+        <div class="text"></div>
+        <img class="justMouse" (click) = "onSelect(song)" src="../../assets/img/past_sermon_audio/play-button.svg" alt="">
+      </div>
+    </div>
+    <div class="TitleSection">
+      <a class="DownloadLink" [href]= "song.path" [download]= "song.name">
+        Download
+      </a>
+      <h4 class = "TitleStyle">{{ song.name }}</h4>
+    </div>
+
+  </li>
+</ul>
+<pagination-controls class="my-pagination" (pageChange)= "p = $event"></pagination-controls>

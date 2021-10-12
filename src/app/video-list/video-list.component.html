@@ -1,0 +1,20 @@
+<!--<p>video-list works!</p>-->
+<div class="theHeader">
+  <input type="text" name="VideoName" [(ngModel)]= "VideoName" placeholder="Enter message title">
+ <button (click) = "SearchfromDetail()">Search</button>
+</div>
+
+<ul class = "ControlOverflow">
+  <li (click) = "onSelect(video)"
+                  *ngFor = "let video of videos ; let i = index;"  class = "vidDetails"
+                  [class.CreateHighlight] = "(seleted == i) && hideSelectionClass ? true : false">
+                  <img [src]= "video.thumbnail" alt="" width="100px" height="100px">
+                  <div class = "vidDetailsDeep">
+                    <a class= "vidTopic">{{video.topic}}</a>
+                    <a class= "vidPreacher">{{video.Preacher}}</a>
+                    <a class= "vidPreacher">{{video.Date_}}</a>
+                  </div>
+                 
+    </li>
+  <!--videos.indexOf(video)-->
+</ul>

@@ -16,6 +16,15 @@
   width: 40px;
 }
 
+.mbold{
+  color: black;
+  font-weight: 600;
+}
+
+.mspace{
+  margin-left: 4px ;
+}
+
 .red_top_decor{
   margin-top: 2%;
   background-color: #C1272D;

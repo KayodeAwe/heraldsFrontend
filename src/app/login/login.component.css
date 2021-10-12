@@ -1,0 +1,313 @@
+/**
+.coverDiv{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: center;
+  padding: 5%;
+}
+
+
+.FullBody{
+  background-color: #E1E1E1;
+  padding: auto;
+}
+
+.FormDetails{
+  background-color: white;
+  padding: 82px 50px;
+  border-radius: 15px 0 0 15px;
+  box-shadow: -5px 5px #88888813;
+}
+
+.pinkInfo{
+  background-color: #FBEFF0;
+  box-shadow: -5px 5px #88888813;
+  border-radius: 0 15px 15px 0;
+}
+
+.RegisterTitle h5{
+ font-size: 32px;
+ color: #0D674D;
+ margin: 0;
+}
+
+.underReg{
+  background-color: #C1272D;
+  height: 7px;
+  width: 50px;
+  margin: 10px 0 28px 0;
+}
+
+.inputForm_{
+  padding: 21px 14px;
+  border: 1px solid #C9555A;
+  background-color: #d2666c10;
+}
+
+.fullName{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lBR {
+  border-radius: 5px 0 0 5px;
+  width: 275px;
+}
+
+.rBR{
+  border-radius: 0 5px 5px 0;
+  width: 275px;
+}
+
+.Wdt{
+  width: 558px;
+  border-radius: 5px;
+}
+
+.BWdt{
+  width: 558px;
+  border-radius: 5px;
+  font-size: 22px;
+  padding: 21px 0;
+  margin-top: 30px;
+  border: none;
+  background-color: #141414;
+  color: white;
+}
+.Pd{
+  margin: 36px 0;
+}
+
+.Dd{
+  margin-bottom: 36px;
+}
+
+
+
+select{
+  color: #7E7E7E;
+  font-size: 22px;
+}
+
+.TandC{
+  padding: 15px 0;
+  color: #7E7E7E;
+}
+
+.pinkInfo{
+  padding: 146px 80px  146px 44px;
+}
+
+.pinkInfo h2{
+  font-size: 22px;
+  font-weight: 550;
+  text-transform: capitalize;
+  color: #545252;
+}
+.pinkInfo p{
+  padding: 5px 0;
+  color: #545252;
+  line-height: 25px;
+}
+.SecondDiv{
+  margin: 45px 0;
+}
+
+**/
+
+::-webkit-input-placeholder { /* Edge */
+
+  color: #7E7E7E;
+  font-size: 12px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+
+  color: #7E7E7E;
+  font-size: 12px;
+}
+
+::placeholder {
+  color: #7E7E7E;
+  font-size: 12px;
+}
+
+
+
+
+.coverDiv{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: center;
+  padding: 4%;
+}
+
+
+.FullBody{
+  background-color: #E1E1E1;
+  padding: auto;
+}
+
+.FormDetails{
+  background-color: white;
+  padding: 41px 25px;
+  border-radius: 8px 0 0 8px;
+  box-shadow: -5px 5px #88888813;
+  width: 330px;
+}
+
+.pinkInfo{
+  background-color: #FBEFF0;
+  box-shadow: -5px 5px #88888813;
+  border-radius: 0 8px 8px 0;
+}
+
+.RegisterTitle h5{
+ font-size: 16px;
+ color: #0D674D;
+ margin: 0;
+}
+
+.underReg{
+  background-color: #C1272D;
+  height: 4px;
+  width: 25px;
+  margin: 5px 0 14px 0;
+}
+
+.inputForm_{
+  padding: 11px 7px;
+  border: 1px solid #C9555A;
+  background-color: #d2666c10;
+}
+
+.fullName{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lBR {
+  border-radius: 2.5px 0 0 2.5px;
+  width: 137px;
+}
+
+.rBR{
+  border-radius: 0 2.5px 2.5px 0;
+  width: 137px;
+}
+
+.Wdt{
+  width: 279px;
+  border-radius: 2.5px;
+}
+
+.CanAct{
+  padding: 10px 5px;
+  border: none;
+  background-color: #C1272D;
+  color: white;
+  border-radius: 2px;
+  font-size: 12px;
+
+}
+.BWdt{
+  width: 279px;
+  border-radius: 2.5px;
+  font-size: 11px;
+  padding: 11px 0;
+  margin-top: 28px;
+  border: none;
+  background-color: #141414;
+  color: white;
+}
+.Pd{
+  margin: 18px 0 0 0;
+}
+
+.Dd{
+  margin-top: 28px;
+}
+
+
+
+select{
+  color: #7E7E7E;
+  font-size: 12px;
+}
+
+.TandC{
+  padding: 8px 0;
+  color: #7E7E7E;
+  font-size: 12px;
+}
+
+p span a{
+  font-size: 12px;
+  color: red;
+}
+.pinkInfo{
+  padding: 73px 40px  73px 22px;
+}
+
+.pinkInfo h2{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #545252;
+}
+.pinkInfo p{
+  padding: 2px 0;
+  color: #545252a6;
+  line-height: 16px;
+  font-size: 12px;
+}
+.SecondDiv{
+  margin: 22px 0;
+}
+
+.subtitleL p{
+  font-size: 14px;
+}
+
+.signUpInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.leftL{
+  height: 1px;
+  background-color: black;
+  width : 50px
+}
+
+.CreateAnAccount{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.CreateAnAccount p{
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+.CanAct a{
+  color: white;
+}
+
+.is-invalid{
+  border: 2px solid red;
+}
+
+.error-red{
+  color: red;
+  font-size: 11px;
+}

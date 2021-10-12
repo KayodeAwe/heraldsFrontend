@@ -1,0 +1,59 @@
+
+<form [formGroup] = "CountryForm" action="">
+  <p class="GreenT"><strong>Are you new in town?</strong> filter by your country and state to find the nearest heraldnation circuit to you. Or register as a Satellite community member and listen to our messages everywhere</p>
+    <div class="topSearch">
+
+        <div class="country">
+          <select (change) = "changeState()" placeholder="Select country" formControlName = "countryChoice">
+            <option value="">Select country</option>
+            <ng-container *ngFor = "let country of countriesData">
+
+              <option [value]= "country.name">{{country.name}}</option>
+
+            </ng-container>
+          </select>
+        </div>
+        <div (click) = "UnhideAddCircuitForm()" class="ToggleAddnewCircuit">
+          <p>Add New Circuit</p>
+        </div>
+        <div class="state">
+          <select (change) = "state_filterCircuit()" placeholder="Select State" formControlName = "state" >
+            <option value="">Select state</option>
+
+              <ng-container *ngFor = "let state_chosen of listOfStates">
+
+              <option [value]= "state_chosen.name">{{state_chosen.name}}</option>
+
+              </ng-container>
+
+          </select>
+        </div>
+    </div>
+</form>
+
+<ul [class.audiosS] = "SwitchDivStyle">
+  <li class="audioThumbnails"  *ngFor = "let circuit of circuitsData | paginate: { itemsPerPage: 9, currentPage: p }">
+    <div class="container">
+      <img class= "testHover" (click) = "onSelect(circuit)" [src]= "circuit.img" alt= "circuit.nameOfCentre" width="300px">
+      <div class="middle">
+        <div class="text"></div>
+        <!--<img class="justMouse" (click) = "onSelect(song)" src="../../assets/img/past_sermon_audio/play-button.svg" alt="">-->
+      </div>
+    </div>
+    <div class="TitleSection">
+      <h4 class = "TitleStyle">{{ circuit.nameOfCentre }}</h4>
+      <div class="country_state_img">
+        <div class="imgdiv">
+          <img src="../../assets/img/location.png" alt="icon" style="width: 18px;">
+        </div>
+        <div class="country_state">
+          <p>{{circuit.country}}<span>, </span></p>
+          <p class="pState">{{circuit.state}}<span>, </span></p>
+          <p class="pState">{{circuit.city}}</p>
+        </div>
+      </div>
+    </div>
+
+  </li>
+</ul>
+<pagination-controls *ngIf = "SwitchDivStyle" class="my-pagination" (pageChange)= "p = $event"></pagination-controls>

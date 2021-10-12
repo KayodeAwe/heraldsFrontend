@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384.294" height="129.02" viewBox="0 0 384.294 129.02">
+  <g id="HERALDS_ICON" transform="translate(-115 -33)">
+    <text id="Heralds" transform="translate(201.294 122)" font-size="86" font-family="Nunito-Regular, Nunito"><tspan x="0" y="0">Heralds</tspan></text>
+    <text id="INTERNATION_CHRISTIAN_CENTER" data-name="INTERNATION CHRISTIAN CENTER" transform="translate(208.294 149)" font-size="17" font-family="Nunito-Light, Nunito" font-weight="300" letter-spacing="0.013em"><tspan x="0" y="0">INTERNATION CHRISTIAN CENTER</tspan></text>
+    <g id="Heralds_icon_2" transform="translate(115 33)">
+      <path id="Path_1" data-name="Path 1" d="M134.59,50.88c-7.284,17.245-8.3,26.287,2.885,41.018,3.673,4.886,23.1,22.881,24.9,38.878.56,4.922,2.075,17.031-26.708,36.72,0,0,16.124,13.286,17.183,12.359,31.128-26.947,19.777-53.5,18.843-55.552-4.877-10.2-22.827-27.732-28.762-35.382C134.549,77.638,131.561,64.01,134.59,50.88Z" transform="translate(-102.505 -50.88)" fill="#c1272d"/>
+      <path id="Path_2" data-name="Path 2" d="M138.2,73.274c5.894,9.113,6.475,21.632-9.152,42.8-.643.838,22.039-.981,48.228-3.745v3.941s-49.7,8.614-50.075,9.184c-4.337,6.42,9.712,24.878,9.712,24.878-22.184-5.1-24.259-26.3-16.6-37.451,5.437-7.954,15.315-14.606,16.415-30.121.332-4.441.332-10.112.332-10.112A4.29,4.29,0,0,1,138.2,73.274Z" transform="translate(-116.279 -33.826)" fill="#c1272d"/>
+    </g>
+  </g>
+</svg>

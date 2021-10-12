@@ -1,6 +1,202 @@
-<!--<app-header-others [content] = "pageContent"></app-header-others> -->
-<p class="test_height">satelite-community works!</p>
-<!--
+<app-header-others [content] = "pageContent"></app-header-others>
+
+<div class="give_section">
+    <div class="top_decor">
+      <img src="../../assets/img/satelite_community_page/Icon awesome-church.svg" alt="churchIcon">
+    </div>
+    <div class="red_top_decor"></div>
+    <div class="giveContent">
+
+        <form [formGroup] = "sateliteCommunityForm" (ngSubmit) = "onSubmit()">
+
+          <div class="fullDtailsInfo">
+
+
+            <div class="CountryChoiceDiv">
+              <p class="redT"><strong>Distance is not a barrier,</strong> With the Satelite community System you can enjoy a good Fellowship with fellow Satelite Community Members, from your country and diaspora</p>
+              <div class="CountryInformationDiv">
+                <div class="countryDiv">
+                  <select (change) = "changeState()" placeholder="Select country" class = "select" formControlName = "country" [class.is-invalid] = "sateliteCommunityForm.get('country').invalid && sateliteCommunityForm.get('country').touched">
+                    <option value="">Select country</option>
+                    <ng-container *ngFor = "let country of CountryCategories$">
+
+                      <option [value]= "country.name">{{country.name}}</option>
+
+                    </ng-container>
+
+                  </select>
+
+                  <div *ngIf = "sateliteCommunityForm.get('country').invalid && sateliteCommunityForm.get('country').touched">
+                    <small class="error-red" *ngIf = "sateliteCommunityForm.get('country').errors?.required" >*Pls choose a country</small>
+                  </div>
+                </div>
+
+                <div class="stateDiv">
+                  <select placeholder="Select State" class = "select" formControlName = "state" [class.is-invalid]= "sateliteCommunityForm.get('state').invalid && sateliteCommunityForm.get('state').touched">
+                    <option value="">Select state</option>
+
+                      <ng-container *ngFor = "let state_chosen of listOfStates">
+
+                       <option [value]= "state_chosen.name">{{state_chosen.name}}</option>
+
+                      </ng-container>
+
+
+                  </select>
+
+                  <div *ngIf = "sateliteCommunityForm.get('state').invalid && sateliteCommunityForm.get('state').touched">
+                    <small class="error-red" *ngIf = "sateliteCommunityForm.get('state').errors?.required" >*Pls choose a State</small>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="SateliteMemberDetails">
+                <div class="headtxt">
+                  <h3>SATELITE COMMUNITY FORM</h3>
+                  <img src="../../assets/img/HERALDS_black_ICON.svg" alt="">
+                </div>
+                <hr>
+                <div class="bodyInfo">
+                    <div class="nameDiv SpaceUnder">
+                      <div class="AllNameDiv SegmentDiv">
+                        <div class="surnameDiv">
+                          <label class="underS"><span>*</span>Surname</label>
+                          <input type="text" formControlName = "surname" placeholder="Paul" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('surname').invalid && sateliteCommunityForm.get('surname').touched">
+                          <div *ngIf = "sateliteCommunityForm.get('surname').invalid && sateliteCommunityForm.get('surname').touched">
+                            <small class="error-red" *ngIf = "sateliteCommunityForm.get('surname').errors?.required" >*Surname is required</small>
+                          </div>
+                        </div>
+                        <div class="firstnameDiv">
+                          <label class="underS"><span>*</span>First name</label>
+                          <input type="text" formControlName = "firstname"placeholder="John" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('firstname').invalid && sateliteCommunityForm.get('firstname').touched">
+                          <div *ngIf = "sateliteCommunityForm.get('firstname').invalid && sateliteCommunityForm.get('firstname').touched">
+                            <small class="error-red" *ngIf = "sateliteCommunityForm.get('firstname').errors?.required" >*First Name is required</small>
+                          </div>
+                        </div>
+                        <div class="middlename">
+                          <label class="underS">Middle name</label>
+                          <input type="text" formControlName = "middlename" placeholder="Peter" class="LDT" [class.is-invalid]= "sateliteCommunityForm.get('middlename').invalid && sateliteCommunityForm.get('middlename').touched" >
+                          <div *ngIf = "sateliteCommunityForm.get('middlename').invalid && sateliteCommunityForm.get('middlename').touched">
+                            <small class="error-red" *ngIf = "sateliteCommunityForm.get('middlename').errors?.required" >Middle Name is required</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="genderPhoneNo SpaceUnder">
+                      <div class="genderPhoneNumber SegmentDiv">
+                          <div class="genderDiv">
+                            <label ><span>*</span>Gender</label>
+                            <select placeholder="Gender" formControlName = "gender" class="GDT LDT" [class.is-invalid] = "sateliteCommunityForm.get('gender').invalid && sateliteCommunityForm.get('gender').touched">
+                              <option value="">Gender</option>
+                              <option value="Male">Male</option>
+                              <option value="FeMale">Female</option>
+                            </select>
+                            <div *ngIf = "sateliteCommunityForm.get('gender').invalid && sateliteCommunityForm.get('gender').touched">
+                              <small class="error-red" *ngIf = "sateliteCommunityForm.get('gender').errors?.required" >Gender is required</small>
+                            </div>
+                          </div>
+                          <div class="phoneNumberDiv">
+                            <label ><span>*</span>Phone number</label>
+                            <input type="tel" formControlName = "phoneNumber" placeholder="080xxxxx" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('phoneNumber').invalid && sateliteCommunityForm.get('phoneNumber').touched">
+                            <div *ngIf = "sateliteCommunityForm.get('phoneNumber').invalid && sateliteCommunityForm.get('phoneNumber').touched">
+                              <small class="error-red" *ngIf = "sateliteCommunityForm.get('phoneNumber').errors?.required" >*Phone number is required</small>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="DOB_email SpaceUnder">
+                        <div class="DOB_privateEmail SegmentDiv">
+                          <div class="dob">
+                            <label ><span>*</span>Date of Birth</label>
+                            <input type="date" formControlName = "dateOfBath" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('dateOfBath').invalid && sateliteCommunityForm.get('dateOfBath').touched">
+                            <div *ngIf = "sateliteCommunityForm.get('dateOfBath').invalid && sateliteCommunityForm.get('dateOfBath').touched">
+                              <small class="error-red" *ngIf = "sateliteCommunityForm.get('dateOfBath').errors?.required" >Date of Birth is required</small>
+                            </div>
+                          </div>
+                          <div class="emailA">
+                            <label ><span>*</span>Email</label>
+                            <input type="email" formControlName = "email" placeholder="abc@mail.com" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('email').invalid && sateliteCommunityForm.get('email').touched" >
+                            <div *ngIf = "sateliteCommunityForm.get('email').invalid && sateliteCommunityForm.get('email').touched">
+                              <small class="error-red" *ngIf = "sateliteCommunityForm.get('email').errors?.required" >email is required</small>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="ResidentialAddress SpaceUnder">
+                      <label><span>*</span>Residential Address</label>
+                      <div class="YourAddress SegmentDiv">
+                        <input type="text" formControlName = "Residential_address" class="addressFull" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('Residential_address').invalid && sateliteCommunityForm.get('Residential_address').touched">
+                      </div>
+                      <div *ngIf = "sateliteCommunityForm.get('Residential_address').invalid && sateliteCommunityForm.get('Residential_address').touched">
+                        <small class="error-red" *ngIf = "sateliteCommunityForm.get('Residential_address').errors?.required" >Address is required</small>
+                      </div>
+                    </div>
+
+                    <div class="SpaceUnder">
+                        <div class="MaritalStatusDiv SegmentDiv">
+                          <div class="MStatus">
+                            <label><span>*</span>Marital Status</label>
+                            <select placeholder="Gender" class = "" formControlName = "marital_status" >
+                              <option value="">Marital status</option>
+                              <option value="Single">Single</option>
+                              <option value="Married">Married</option>
+                              <option value="In a Relationship">In a Relationship</option>
+                              <option value="Engaged">Engaged</option>
+                            </select>
+                            <div *ngIf = "sateliteCommunityForm.get('marital_status').invalid && sateliteCommunityForm.get('marital_status').touched">
+                              <small class="error-red" *ngIf = "sateliteCommunityForm.get('marital_status').errors?.required" >Marital Status is required</small>
+                            </div>
+                          </div>
+                          <div class="Occupation">
+                            <label><span>*</span>Occupation</label>
+                            <input type="text" placeholder="Occupation" formControlName = "occupation" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('occupation').invalid && sateliteCommunityForm.get('occupation').touched">
+                            <div *ngIf = "sateliteCommunityForm.get('occupation').invalid && sateliteCommunityForm.get('occupation').touched">
+                              <small class="error-red" *ngIf = "sateliteCommunityForm.get('occupation').errors?.required" >Occupation is required</small>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="NOK SpaceUnder">
+                      <div class="NOK_details SegmentDiv">
+                        <div class="NOKname">
+                          <label><span>*</span>Next of Kin</label>
+                          <input type="text" formControlName = "nameOfNextOfKin" placeholder="Name of NOK" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('nameOfNextOfKin').invalid && sateliteCommunityForm.get('nameOfNextOfKin').touched">
+                          <div *ngIf = "sateliteCommunityForm.get('nameOfNextOfKin').invalid && sateliteCommunityForm.get('nameOfNextOfKin').touched">
+                            <small class="error-red" *ngIf = "sateliteCommunityForm.get('nameOfNextOfKin').errors?.required" >Name of NOK is required</small>
+                          </div>
+                        </div>
+                        <div class="NOK_number">
+                          <label><span>*</span>Contact of Next of Kin</label>
+                          <input type="tel" formControlName = "PhoneNumberOfNextOfKin" placeholder="Phone number of NOK" class="LDT" [class.is-invalid] = "sateliteCommunityForm.get('PhoneNumberOfNextOfKin').invalid && sateliteCommunityForm.get('PhoneNumberOfNextOfKin').touched">
+                          <div *ngIf = "sateliteCommunityForm.get('PhoneNumberOfNextOfKin').invalid && sateliteCommunityForm.get('PhoneNumberOfNextOfKin').touched">
+                            <small class="error-red" *ngIf = "sateliteCommunityForm.get('PhoneNumberOfNextOfKin').errors?.required" >Contact of NOK is required</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="Submitbutton">
+                      <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+
+          </div>
+
+
+        </form>
+
+    </div>
+    <div class="below_decor"></div>
+  </div>
+
 <app-footer-sub></app-footer-sub>
 <app-footer-main></app-footer-main>
--->
+

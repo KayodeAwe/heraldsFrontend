@@ -1,0 +1,142 @@
+
+<div class="cover">
+  <form [formGroup] = "newCircuitForm">
+        <div *ngIf = "chosenCircuitDetails" class="fullDetails">
+          <div class="imgDiv">
+            <img [src]= "chosenCircuitDetails.img" alt="Circuit Image">
+          </div>
+          <div class="infoAboutCircuit">
+            <div class="leftA">
+              <p class="tTitle">Circuit</p>
+              <p *ngIf= "admin_toggle_btn" class="blockborder ttColor">{{chosenCircuitDetails.nameOfCentre}}</p>
+              <input *ngIf= "!admin_toggle_btn" type="text" class="blockborder ttColor" formControlName = "nameOfCentre" [class.is-invalid]= "(newCircuitForm.get('nameOfCentre').invalid && newCircuitForm.get('nameOfCentre').touched) || (newCircuitForm.get('nameOfCentre').invalid && unsuccessful) ">
+              <div *ngIf = "(newCircuitForm.get('nameOfCentre').invalid && newCircuitForm.get('nameOfCentre').touched) || (newCircuitForm.get('nameOfCentre').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="newCircuitForm.get('nameOfCentre').errors?.required" >*Pls type in the Circuit name</small>
+              </div>
+            </div>
+            <div class="leftA">
+              <p class="tTitle">Country</p>
+              <p *ngIf= "admin_toggle_btn" class="blockborder">{{chosenCircuitDetails.country}}</p>
+              <select *ngIf= "!admin_toggle_btn" (change) = "changeState()" placeholder="Select country" class = "select form-control blockborder" formControlName = "country" [class.is-invalid]= "(newCircuitForm.get('country').invalid && newCircuitForm.get('country').touched) || (newCircuitForm.get('country').invalid && unsuccessful)">
+                <option value="">Select country</option>
+                <ng-container *ngFor = "let country of CountryCategories$">
+
+                  <option [value]= "country.name">{{country.name}}</option>
+
+                </ng-container>
+              </select>
+              <div *ngIf = "(newCircuitForm.get('country').invalid && newCircuitForm.get('country').touched) || (newCircuitForm.get('country').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="newCircuitForm.get('country').errors?.required" >*Country required</small>
+              </div>
+            </div>
+            <div class="leftA">
+              <p class="tTitle">State</p>
+              <p *ngIf= "admin_toggle_btn" class="blockborder">{{chosenCircuitDetails.state}}</p>
+              <select *ngIf= "!admin_toggle_btn" placeholder="Select State" class = "select form-control blockborder" formControlName = "state" [class.is-invalid]= "(newCircuitForm.get('state').invalid && newCircuitForm.get('state').touched) || (newCircuitForm.get('state').invalid && unsuccessful)">
+                <option value="">Select state</option>
+
+                  <ng-container *ngFor = "let state_chosen of listOfStates">
+
+                  <option [value]= "state_chosen.name">{{state_chosen.name}}</option>
+
+                  </ng-container>
+
+
+              </select>
+              <div *ngIf = "(newCircuitForm.get('state').invalid && newCircuitForm.get('state').touched) || (newCircuitForm.get('state').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="(newCircuitForm.get('state').errors?.required)" >*State required</small>
+              </div>
+            </div>
+            <div class="leftA">
+              <p class="tTitle">City</p>
+              <p *ngIf= "admin_toggle_btn" class="blockborder">{{chosenCircuitDetails.city}}</p>
+              <input *ngIf= "!admin_toggle_btn" type="text" class= "form-controlC form-control blockborder" formControlName = "city" [class.is-invalid]= "(newCircuitForm.get('city').invalid && newCircuitForm.get('city').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+              <div *ngIf = "(newCircuitForm.get('city').invalid && newCircuitForm.get('city').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="newCircuitForm.get('city').errors?.required" >*City name required</small>
+              </div>
+            </div>
+            <div class="leftA">
+              <p class="tTitle">Street</p>
+              <p *ngIf= "admin_toggle_btn" class="blockborder">{{chosenCircuitDetails.street}}</p>
+              <input *ngIf= "!admin_toggle_btn" type="text" class= "form-control form-control blockborder" formControlName = "street" [class.is-invalid]= "(newCircuitForm.get('street').invalid && newCircuitForm.get('street').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+              <div *ngIf = "(newCircuitForm.get('street').invalid && newCircuitForm.get('street').touched) || (newCircuitForm.get('city').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="newCircuitForm.get('street').errors?.required" >*Street name required</small>
+              </div>
+            </div>
+            <div class="leftA">
+              <p class="tTitle">Address</p>
+              <textarea *ngIf= "admin_toggle_btn" class="blockborder" rows="3" cols="50" readonly>{{chosenCircuitDetails.address}}</textarea>
+              <textarea *ngIf= "!admin_toggle_btn" class= "form-control blockborder" formControlName = "address" rows="4" cols="50" [class.is-invalid]= "(newCircuitForm.get('address').invalid && newCircuitForm.get('address').touched) || (newCircuitForm.get('address').invalid && unsuccessful)"></textarea>
+              <div *ngIf = "(newCircuitForm.get('address').invalid && newCircuitForm.get('address').touched) || (newCircuitForm.get('address').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="newCircuitForm.get('address').errors?.required" >*full Address required</small>
+              </div>
+            </div>
+            <div class="leftA">
+              <p class="tTitle">Leader</p>
+              <p *ngIf= "admin_toggle_btn" class="blockborder">{{chosenCircuitDetails.pastorInCharge}}</p>
+              <input *ngIf= "!admin_toggle_btn" type="text" class= "form-control blockborder" formControlName = "pastorInCharge" [class.is-invalid]= "(newCircuitForm.get('pastorInCharge').invalid && newCircuitForm.get('pastorInCharge').touched) || (newCircuitForm.get('pastorInCharge').invalid && unsuccessful)">
+              <div *ngIf = "(newCircuitForm.get('pastorInCharge').invalid && newCircuitForm.get('pastorInCharge').touched) || (newCircuitForm.get('pastorInCharge').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="newCircuitForm.get('pastorInCharge').errors?.required" >*Pastor required</small>
+              </div>
+            </div>
+            <div class="leftA">
+              <p class="tTitle">Contact</p>
+              <p *ngIf= "admin_toggle_btn" class="blockborder">{{chosenCircuitDetails.centerPhoneNumber}}</p>
+              <input *ngIf= "!admin_toggle_btn" type="text" class= "form-control blockborder" formControlName = "centerPhoneNumber" [class.is-invalid]= "(newCircuitForm.get('centerPhoneNumber').invalid && newCircuitForm.get('centerPhoneNumber').touched) || (newCircuitForm.get('centerPhoneNumber').invalid && unsuccessful)">
+              <div *ngIf = "(newCircuitForm.get('centerPhoneNumber').invalid && newCircuitForm.get('centerPhoneNumber').touched) || (newCircuitForm.get('centerPhoneNumber').invalid && unsuccessful)">
+                <small class="error-red" *ngIf ="newCircuitForm.get('centerPhoneNumber').errors?.required" >*Contact required</small>
+              </div>
+            </div>
+            <div *ngIf= "!admin_toggle_btn" class="links_to_social_media">
+              <div class="form-group space4">
+                <p class="tTitle"> Facebook Link </p>
+                <input type="text" class= "form-control blockborder" formControlName = "facebookLink">
+              </div>
+              <div class="form-group space4">
+                <label class="tTitle"> Instagram Link </label>
+                <input type="text" class= "form-control blockborder" formControlName = "instagramLink">
+              </div>
+              <div class="form-group space4">
+                <label class="tTitle"> Twitter Link </label>
+                <input type="text" class= "form-control blockborder" formControlName = "twitterLink">
+              </div>
+            </div>
+
+            <div *ngIf= "admin_toggle_btn"  class="SocialMedia">
+              <div class="titleSocial">
+                <p>Follow this circuit</p>
+              </div>
+              <div class="SMLinks">
+                <a [href]= "chosenCircuitDetails.facebookLink">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30.849" height="30.849" viewBox="0 0 30.849 30.849">
+                      <path id="Icon_metro-facebook" data-name="Icon metro-facebook" d="M28.278,1.928H7.712A5.141,5.141,0,0,0,2.571,7.07V27.635a5.141,5.141,0,0,0,5.141,5.142H17.995V19.28H14.139V15.424h3.856V12.532a4.82,4.82,0,0,1,4.82-4.82h4.82v3.856h-4.82a.964.964,0,0,0-.964.964v2.892h5.3l-.964,3.856H21.851v13.5h6.427a5.141,5.141,0,0,0,5.141-5.142V7.07a5.141,5.141,0,0,0-5.141-5.142Z" transform="translate(-2.571 -1.928)" fill="#4267B2"/>
+                  </svg>
+                </a>
+                <a [href]= "chosenCircuitDetails.instagramLink">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="31.518" height="30" viewBox="0 0 31.518 30">
+                    <path id="Icon_awesome-instagram" data-name="Icon awesome-instagram" d="M15.757,9.546a7.88,7.88,0,0,0-8.079,7.692,7.88,7.88,0,0,0,8.079,7.692,7.88,7.88,0,0,0,8.079-7.692A7.88,7.88,0,0,0,15.757,9.546Zm0,12.692a5.14,5.14,0,0,1-5.252-5,5.136,5.136,0,0,1,5.252-5,5.136,5.136,0,0,1,5.252,5,5.14,5.14,0,0,1-5.252,5ZM26.051,9.231a1.887,1.887,0,1,1-1.884-1.794A1.837,1.837,0,0,1,26.051,9.231ZM31.4,11.052a8.646,8.646,0,0,0-2.545-6.286,9.655,9.655,0,0,0-6.6-2.423c-2.6-.141-10.4-.141-13,0a9.642,9.642,0,0,0-6.6,2.417A8.675,8.675,0,0,0,.105,11.046c-.148,2.477-.148,9.9,0,12.378a8.646,8.646,0,0,0,2.545,6.286,9.667,9.667,0,0,0,6.6,2.423c2.6.141,10.4.141,13,0a9.591,9.591,0,0,0,6.6-2.423A8.7,8.7,0,0,0,31.4,23.423c.148-2.477.148-9.894,0-12.371ZM28.041,26.081a5.2,5.2,0,0,1-3,2.852c-2.074.783-7,.6-9.288.6s-7.221.174-9.288-.6a5.2,5.2,0,0,1-3-2.852c-.823-1.975-.633-6.661-.633-8.843s-.183-6.875.633-8.843a5.2,5.2,0,0,1,3-2.852c2.074-.783,7-.6,9.288-.6s7.221-.174,9.288.6a5.2,5.2,0,0,1,3,2.852c.823,1.975.633,6.661.633,8.843S28.863,24.113,28.041,26.081Z" transform="translate(0.005 -2.238)" fill="#cd486b"/>
+                  </svg>
+                </a>
+                <a [href]= "chosenCircuitDetails.twitterLink">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="29.239" viewBox="0 0 36 29.239">
+                    <path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M32.3,10.668c.023.32.023.64.023.959,0,9.754-7.424,20.992-20.992,20.992A20.85,20.85,0,0,1,0,29.307a15.263,15.263,0,0,0,1.782.091,14.776,14.776,0,0,0,9.16-3.152,7.391,7.391,0,0,1-6.9-5.117,9.3,9.3,0,0,0,1.393.114,7.8,7.8,0,0,0,1.942-.251,7.379,7.379,0,0,1-5.916-7.241V13.66A7.431,7.431,0,0,0,4.8,14.6,7.389,7.389,0,0,1,2.513,4.728a20.972,20.972,0,0,0,15.213,7.721,8.329,8.329,0,0,1-.183-1.69A7.385,7.385,0,0,1,30.312,5.711a14.526,14.526,0,0,0,4.683-1.782,7.358,7.358,0,0,1-3.244,4.066A14.791,14.791,0,0,0,36,6.853a15.86,15.86,0,0,1-3.7,3.815Z" transform="translate(0 -3.381)" fill="#00acee"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="basebtn">
+              <div class="basebtnLeft">
+                <button (click) = "toggleListbtn()">Return to Church list</button>
+              </div>
+              <div class="basebtnRight">
+                <button (click) = "toggle_admin()" *ngIf = "admin_toggle_btn"  class="adminC">Admin Features</button>
+                <button *ngIf = "!admin_toggle_btn" class="updateC" (click) = "updateCircuit()">Update Circuit</button>
+                <button *ngIf= "!admin_toggle_btn" class="deleteC" (click) = "deleteCircuit()">Delete Circuit</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </form>
+</div>
+
+

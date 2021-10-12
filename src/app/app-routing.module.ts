@@ -13,6 +13,10 @@ import { MinistriesComponent } from './ministries/ministries.component';
 import { EventsComponent } from './events/events.component';
 import { GiveComponent } from './give/give.component';
 import { AboutTheChurchComponent } from './about-the-church/about-the-church.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
+
+import { AuthGuard } from './auth.guard';
 
 import { HeaderHomepageComponent } from './header-homepage/header-homepage.component';
 import { HeaderOthersComponent } from './header-others/header-others.component';
@@ -21,18 +25,69 @@ import { FooterSubComponent } from './footer-sub/footer-sub.component';
 
 
 const routes: Routes = [
-  { path : '', component : HomepageComponent},
-  { path : 'pastSermonVideo', component : PastSermonVideoComponent},
-  { path : 'pastSermonAudio', component : PastSermonAudioComponent},
-  { path : 'dailyBibleReading', component : DailyBibleReadingComponent},
-  { path : 'membersDashbord', component : MembersDashbordComponent},
-  { path : 'churchCircuit', component : ChurchCircuitComponent},
-  { path : 'sateliteCommunity', component : SateliteCommunityComponent},
-  { path : 'purchasedBooks', component : PurchasedBooksComponent},
-  { path : 'ministries', component : MinistriesComponent},
-  { path : 'events', component : EventsComponent},
-  { path : 'give', component : GiveComponent},
-  { path : 'aboutTheChurch', component : AboutTheChurchComponent},
+  {
+    path : '',
+    redirectTo: '/home',
+    pathMatch : 'full'
+  },
+  {
+    path : 'home',
+    component : HomepageComponent
+  },
+  {
+    path : 'pastSermonVideo',
+    component : PastSermonVideoComponent
+  },
+  {
+    path : 'pastSermonAudio',
+    component : PastSermonAudioComponent
+  },
+  {
+    path : 'dailyBibleReading',
+    component : DailyBibleReadingComponent
+  },
+  {
+    path : 'membersDashbord',
+    component : MembersDashbordComponent,
+    canActivate : [ AuthGuard ]
+  },
+  {
+    path : 'churchCircuit',
+    component : ChurchCircuitComponent
+  },
+  {
+    path : 'sateliteCommunity',
+    component : SateliteCommunityComponent
+  },
+  {
+    path : 'purchasedBooks',
+    component : PurchasedBooksComponent
+  },
+  {
+    path : 'ministries',
+    component : MinistriesComponent
+  },
+  {
+    path : 'events',
+    component : EventsComponent
+  },
+  {
+    path : 'give',
+    component : GiveComponent
+  },
+  {
+    path : 'aboutTheChurch',
+    component : AboutTheChurchComponent
+  },
+  {
+    path : 'registration',
+    component : RegistrationComponent
+  },
+  {
+    path : 'login',
+    component : LoginComponent
+  },
+
 ];
 
 @NgModule({
@@ -47,4 +102,4 @@ export const routingComponents = [HomepageComponent,
   PurchasedBooksComponent, MinistriesComponent,
   EventsComponent, GiveComponent, AboutTheChurchComponent,
   HeaderHomepageComponent, HeaderOthersComponent, FooterMainComponent,
-  FooterSubComponent]
+  FooterSubComponent, RegistrationComponent, LoginComponent]

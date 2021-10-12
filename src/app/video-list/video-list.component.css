@@ -1,0 +1,66 @@
+*{
+  text-decoration: none;
+  list-style: none;
+}
+
+
+.CreateHighlight{
+  background-color: rgb(68, 68, 68);
+  color: white;
+  border-radius: 0 4px 4px 0;
+}
+
+.vidDetails{
+  display: flex;
+  margin-top: 3%;
+
+}
+
+.vidDetails:first-child {
+  margin-top: 0;
+} 
+
+.vidDetailsDeep{
+  padding : 3%;
+  display : flex;
+  flex-direction: column;
+}
+
+.vidTopic{
+  font-size : 15px;
+  font-weight: 600;
+}
+
+.vidPreacher{
+  font-size : 12px;
+  margin-top : 3%;
+}
+
+.ControlOverflow{
+  /**background-color: #eee;
+  width: 200px;**/
+  margin-top: 5%;
+  height: 600px;
+  overflow: auto;
+  padding : 0 2% 0 0;
+  border : none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c9cccb; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

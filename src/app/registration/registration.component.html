@@ -1,0 +1,104 @@
+
+<div class="FullBody">
+
+  <div class="coverDiv">
+    <div class="FormDetails">
+      <div class="RegisterTitle">
+        <h5>REGISTER</h5>
+        <div class="underReg"></div>
+      </div>
+      <form [formGroup] = "registrationForm" (ngSubmit) = "onSubmit()">
+
+        <div class="userDetails">
+
+          <div class="fullName">
+            <div class="firstNameDiv">
+              <input [class.is-invalid] = "registrationForm.get('firstName').invalid && registrationForm.get('firstName').touched" class = "inputForm_ lBR" type="text" formControlName = "firstName" placeholder="first Name">
+
+              <div *ngIf = "registrationForm.get('firstName').invalid && registrationForm.get('firstName').touched">
+                <small class="error-red" *ngIf = "registrationForm.get('firstName').errors?.required" >First Name is required</small>
+                <small class="error-red" *ngIf = "registrationForm.get('firstName').errors?.minlength" >At least 3 Characters</small>
+              </div>
+
+            </div>
+            <div class="lastNameDiv">
+              <input class = "inputForm_ rBR" type="text" formControlName = "lastName" placeholder="last Name">
+            </div>
+          </div>
+
+          <div class="EmailDiv"><input [class.is-invalid] = "registrationForm.get('email').invalid && registrationForm.get('email').touched" class = "inputForm_ Wdt Pd" type="email" formControlName = "email" placeholder="Email"></div>
+
+          <div *ngIf = "registrationForm.get('email').invalid && registrationForm.get('email').touched">
+            <small class="error-red " *ngIf = "registrationForm.get('email').errors?.required" >Email is required</small>
+          </div>
+
+          <div class="squadDiv Pd">
+            <select placeholder="Select Squad" class = "inputForm_ Wdt Dd" formControlName = "squad" >
+              <option value="">Select Squad</option>
+              <ng-container *ngFor = "let SquadCategory of SquadCategories$">
+
+                <option [value]= "SquadCategory.squadCode">{{SquadCategory.description}}</option>
+
+              </ng-container>
+
+            </select>
+          </div>
+          <div class="phoneNumberDiv">
+            <input class = "inputForm_ Wdt Dd" type="tel" formControlName = "phoneNumber" placeholder="Phone Number">
+          </div>
+          <div class="churchUnitDiv">
+            <select  class = "inputForm_ Wdt Dd" formControlName = "churchUnit">
+              <option value="">Select Church unit</option>
+              <ng-container *ngFor = "let ChurchUnitCategory of ChurchUnitCategories">
+
+                <option [value]= "ChurchUnitCategory.unitCode">{{ChurchUnitCategory.description}}</option>
+
+              </ng-container>
+            </select>
+          </div>
+          <div class="passwordDiv">
+            <input  class = "inputForm_ Wdt Dl" type="password" formControlName = "passWord" placeholder="Password" [class.is-invalid] = "registrationForm.get('passWord').invalid && registrationForm.get('passWord').touched">
+            <div *ngIf = "registrationForm.get('passWord').invalid && registrationForm.get('passWord').touched">
+              <small class="error-red" *ngIf = "registrationForm.get('passWord').errors?.required" >Your Email is required</small>
+              <small class="error-red" *ngIf = "registrationForm.get('passWord').errors?.minlength" >At least 5 Characters</small>
+            </div>
+          </div>
+
+          <button [disabled] = "!registrationForm.valid" class="BWdt mupdown" type="submit">Register an account</button>
+          <!--{{registrationForm.value | json}}-->
+          <!--{{errorMsg}}-->
+          <p class="TandC">By registering, you agree to our terms of service and privacy policy.<br> Already have an account? <span><a routerLink="/login">Sign in </a></span></p>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="pinkInfo">
+      <div class="firstDiv">
+        <h2>Join our Community</h2>
+        <p>Create an account as a<br>
+          Herald supplying all required<br>
+          information.</p>
+      </div>
+      <div class="firstDiv SecondDiv">
+        <h2>Get involved</h2>
+        <p>Participate in all the activities<br>
+          of your Squad. Enjoy the Military<br>
+          Drill and Family feel.</p>
+      </div>
+      <div class="firstDiv">
+        <h2>Manage your Profile</h2>
+        <p>Update your Profile regularly,<br>
+          using the Edit profile.
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+<!--[content_footer] = "pageContent.subfooter"-->
+
+<app-footer-sub ></app-footer-sub>
+<app-footer-main></app-footer-main>
